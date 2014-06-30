@@ -1,3 +1,3 @@
 require_relative '../lib/fibonacci.rb'
-a=Fibonacci.new
-a.fibonacci_series { |operand1,operand2| operand1,operand2=operand2,[operand1,operand2].inject(:+) }
+fibonacci_object = Fibonacci.new
+fibonacci_object.fibonacci_series{ |operand1,operand2| operand1,operand2 = operand2, operand1 + operand2 }
