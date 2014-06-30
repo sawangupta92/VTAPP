@@ -5,8 +5,8 @@ class String
   end
 
   def alphabets_hash # returns number of alphabets in a given string
-    number_of_alphabets_in_string = Hash.new(0)
-    self.to_array.each { |alphabet| number_of_alphabets_in_string[alphabet] += 1 }
-    return number_of_alphabets_in_string
+    alphabets_count = Hash.new(0)
+    self.to_array.each { |alphabet| alphabets_count[alphabet] += 1 }
+    return alphabets_count
   end
 end
