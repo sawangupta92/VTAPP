@@ -4,7 +4,7 @@ class Array
     hash_to_check = Hash.new{ |hash, key| hash[key] = [] }
     hash_to_check["odd"] = odd
     hash_to_check["even"] =even
-    return hash_to_check
+    hash_to_check
   end
   
   def group_array_into_odd_even
@@ -25,3 +25,4 @@ class Array
   end
 
 end
+['abc','def',1234,'234','abcd','x','mnop','5','zZzZ'].group_array_into_odd_even

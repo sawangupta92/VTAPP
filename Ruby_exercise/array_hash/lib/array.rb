@@ -8,7 +8,7 @@ class Array
       hash_to_check[word.length] << word
     end
     
-    puts hash_to_check
+    hash_to_check
   end
 
 end

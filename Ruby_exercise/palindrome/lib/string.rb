@@ -7,7 +7,7 @@ class String
     if(decision != 'q' and decision != 'Q')
       check_palindrome?
     else
-      return 0
+      0
     end
   end
   
