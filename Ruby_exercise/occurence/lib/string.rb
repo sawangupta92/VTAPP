@@ -9,4 +9,5 @@ class String
     self.to_array.each{ |alphabet| alphabets_count[alphabet] += 1 }
     return alphabets_count
   end
+  
 end
