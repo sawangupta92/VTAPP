@@ -1,3 +1,2 @@
 require_relative '../lib/array.rb'
-stringobject = Convert_string.new
-stringobject.convert_string_to_array.power(gets.chomp.to_i)
+[1,2,3].power(2)
