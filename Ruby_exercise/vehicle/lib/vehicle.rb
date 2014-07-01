@@ -1,22 +1,31 @@
 class Vehicle
+
   attr_reader :price
+
   def initialize(name,price)
-    @name=name
-    @price=price
+    @name = name
+    @price = price
   end
+
   def show_details
-    puts "name is #{@name} price is #{@price}"
+    return @name, @price
   end
+
   def change_price(new_price)
-    @price=new_price
+    @price = new_price
   end
+
 end
+
 class Bike<Vehicle
+
   def initialize(name,price,dealer)
     super(name,price)
-    @dealer=dealer
+    @dealer = dealer
   end
+
   def show_details
-    puts "name is #{@name} price is #{@price} and dealer is #{@dealer}"
+    return @name, @price, @dealer
   end
+
 end
