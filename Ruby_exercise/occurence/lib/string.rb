@@ -1,7 +1,7 @@
 class String
 
   def to_array # breaks a given string into array representing alphabets only
-    self.downcase.scan(/[a-z]/)
+    downcase.scan(/[a-z]/)
   end
 
   def alphabets_hash # returns number of alphabets in a given string
