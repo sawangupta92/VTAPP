@@ -9,21 +9,19 @@ class Customer
   end
   
   def print_info
-    puts "#{@name} #{@balance} #{@@account_number}"
-    add_account
+    return @name, @balance, @@account_number
   end
   
   def add_account
-    puts "Enter q or Q to exit else press any other key to continue"
-    decision=gets.chomp
-  
-    if (decision != 'q' and decision != 'Q')
-      puts "Enter name of account holder"
-      initialize(gets.chomp)
-      print_info
-    else
-      return 0
-    end
-  
+    initialize(gets.chomp)
   end
+
+  def deposit(balance)
+    @balance += balance
+  end
+
+  def withdrawal(balance)
+    @balance -= balance
+  end
+
 end
