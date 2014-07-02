@@ -1,4 +1,4 @@
 require_relative '../lib/string.rb'
 
-puts 'Enter string'
+puts 'Enter a string'
 puts gets.chomp.to_s
