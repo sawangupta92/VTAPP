@@ -1,15 +1,14 @@
 class Fibonacci
 
-  def fibonacci_series()
-    operand1,operand2 = 0,1
+  def series
+    number1, number2 = 0, 1
     result = [0]
-    puts "Fibonacci series upto thousand is"
 
-    while operand2 < 1000
-      operand1,operand2 = yield operand1, operand2
-    result.push(operand1)
+    while number2 < 1000
+      number1, number2 = yield number1, number2
+    result.push(number1)
     end
-    
+
     result
   end
 
