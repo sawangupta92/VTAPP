@@ -1,3 +1,3 @@
 require_relative '../lib/string.rb'
-puts "Enter a string"
-puts gets().alphabets_hash
+puts 'Enter a string'
+puts gets.alphabets_hash
