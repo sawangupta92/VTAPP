@@ -14,7 +14,7 @@ while(!decision.match(/[q]/i))
     puts customer.print_info
   when '2'
     puts 'enter amount'
-    customer.withdrawal(gets.chomp.to_i) {puts 'you cannot do this'}
+    customer.withdrawal(gets.chomp.to_i) { puts 'you cannot do this' }
   when '3'
     puts 'enter amount'
     customer.deposit(gets.chomp.to_i)

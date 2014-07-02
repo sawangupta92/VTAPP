@@ -14,19 +14,23 @@ class Customer
   end
 
   def deposit(balance)
+
     if(balance >= 1)
       @balance += balance
     else
       yield
     end
+
   end
 
   def withdrawal(balance)
+
     if(balance <= @balance)
       @balance -= balance
     else
       yield
     end
+
   end
 
 end
