@@ -1,18 +1,13 @@
 require_relative '../lib/string.rb'
 
-palindromeobject = String.new
-decision = 'y'
+string = 'y'
 
-while(!decision.match(/[q]/i))
-  puts 'Enter a string'
-  p gets.chomp.check_palindrome?
-  puts 'Enter q/Q to exit'
-  decision = gets.chomp
+while(!string.match(/^[q]$/i))
+  puts 'Enter a string or Enter q/Q to exit'
+  string = gets.chomp
 
-  if decision == /[q]/i
-    p 'exit'
+  if string != /^[q]$/i
+    p string.palindrome?
   end
 
 end
-
-puts palindromeobject.check_palindrome?
