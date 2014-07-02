@@ -1,7 +1,9 @@
 class String
 
+  Regex=/[\w]+/
+  
   def reverse_word
-    scan(/[\w]+/).reverse.join(' ')
+    scan(Regex).reverse.join(' ')
   end
 
 end
