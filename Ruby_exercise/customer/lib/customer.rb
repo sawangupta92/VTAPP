@@ -1,27 +1,32 @@
 class Customer
 
-  @@account_number = 0
-  
+  @account_number = 0
+  @@index_of_account_number = 0
   def initialize(name)
     @name = name
     @balance = 1000
-    @@account_number += 1
+    @@index_of_account_number += 1
+    @account_number = @@index_of_account_number
   end
-  
+
   def print_info
-    return @name, @balance, @@account_number
-  end
-  
-  def add_account
-    initialize(gets.chomp)
+    [@name, @balance, @account_number].to_s
   end
 
   def deposit(balance)
-    @balance += balance
+    if(balance >= 1)
+      @balance += balance
+    else
+      yield
+    end
   end
 
   def withdrawal(balance)
-    @balance -= balance
+    if(balance <= @balance)
+      @balance -= balance
+    else
+      yield
+    end
   end
 
 end
