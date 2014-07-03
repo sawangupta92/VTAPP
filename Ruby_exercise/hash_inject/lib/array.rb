@@ -1,29 +1,20 @@
 class Array
 
-  def add_into_hash(even, odd)
+  def group_by_length
     hash_to_check = Hash.new { |hash, key| hash[key] = [] }
-    hash_to_check['odd'] = odd
-    hash_to_check['even'] = even
+    each do |word|
+      hash_to_check[word.to_s.length] << word
+    end
     hash_to_check
   end
  
-  def group_array_into_odd_even
-    even= Hash.new { |hash, key| hash[key] = [] }
-    odd=Hash.new { |hash, key| hash[key] = [] }
-
-    each do |word| 
-      word = word.to_s
-
-      if word.length.even?
-        even[word.length] << word
-
-      else
-        odd[word.length] << word
-      end
-
-    end
-    add_into_hash(even, odd)
-
+  def group_into_odd_even
+    result=Hash.new { |hash, key| hash[key] = [] }
+    group_by_length.inject({}) { |mem, (var1,var2)|
+      result['odd']<<var2 if var1.odd?
+      result['even']<<var2 if var1.even?
+    }
+    result
   end
 
 end
