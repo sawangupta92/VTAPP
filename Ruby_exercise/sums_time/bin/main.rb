@@ -1,5 +1,5 @@
 require_relative '../lib/time.rb'
 require 'date'
 
-time=Time.new
-p time.sum('22:15:06','04:55:06')
+p q=Time.sum('02:15:06','22:55:06')
+# puts "#{q.hour} #{q.min} #{q.sec}"
