@@ -1,26 +1,27 @@
 class String
 
   def count_character_by_type
-    lower_case, upper_case, digits, special_case = 0, 0, 0, 0
+    hash_with_count=Hash.new(0)
 
     each_char do |character|
 
       if('a'..'z').include? character
-        lower_case += 1
+
+        hash_with_count['lower_case'] += 1
 
       elsif('A'..'Z').include? character
-        upper_case += 1
-      
+        hash_with_count['upper_case'] += 1
+
       elsif('0'..'9').include? character
-        digits += 1
+        hash_with_count['digits'] += 1
 
       else
-        special_case += 1
+        hash_with_count['special_case'] += 1
       end 
 
     end
 
-    [lower_case, uper_case, digits, special_case].to_s
+    hash_with_count.to_s
   end
 
 end
