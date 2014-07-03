@@ -11,13 +11,13 @@ while(!decision.match(/[q]/i))
 
   case decision
   when '1'
-    puts customer.print_info
+    puts customer.show_customer_info
   when '2'
     puts 'enter amount'
     customer.withdrawal(gets.chomp.to_i) { puts 'you cannot do this' }
   when '3'
     puts 'enter amount'
-    customer.deposit(gets.chomp.to_i)
+    customer.deposit(gets.chomp.to_i) { puts 'you can not do this' }
   when '4'
     puts 'Enter name of account holder'
     customer = Customer.new(gets.chomp)

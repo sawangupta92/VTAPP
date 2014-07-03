@@ -9,7 +9,7 @@ class Customer
     @account_number = @@index_of_account_number
   end
 
-  def print_info
+  def show_customer_info
     [@name, @balance, @account_number].to_s
   end
 
