@@ -1,7 +1,7 @@
 class String
 
   def count_character_by_type
-    hash_with_count=Hash.new(0)
+    hash_with_count = Hash.new(0)
 
     each_char do |character|
 
