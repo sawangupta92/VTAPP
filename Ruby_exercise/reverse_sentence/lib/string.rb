@@ -1,6 +1,6 @@
 class String
 
-  Regex=/[\w]+/
+  Regex = /[\S]+/
   
   def reverse_word
     scan(Regex).reverse.join(' ')
