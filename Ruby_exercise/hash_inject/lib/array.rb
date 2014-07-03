@@ -9,10 +9,10 @@ class Array
   end
  
   def group_into_odd_even
-    result=Hash.new { |hash, key| hash[key] = [] }
+    result = Hash.new { |hash, key| hash[key] = [] }
     group_by_length.inject({}) { |mem, (var1,var2)|
-      result['odd']<<var2 if var1.odd?
-      result['even']<<var2 if var1.even?
+      result['odd'] << var2 if var1.odd?
+      result['even'] << var2 if var1.even?
     }
     result
   end
