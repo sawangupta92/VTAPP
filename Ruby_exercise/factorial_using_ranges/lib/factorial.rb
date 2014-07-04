@@ -1,13 +1,13 @@
-class Factorial
+class Fixnum
 
-  def calculate(operand)
-
-    if operand == 0
+  def factorial
+    if self == 0
       1
+    elsif self > 0
+      (1..self).inject(:*)
     else
-      (1..operand).inject(:*)
+      'Wrong input negative value'
     end
-
   end
 
 end
