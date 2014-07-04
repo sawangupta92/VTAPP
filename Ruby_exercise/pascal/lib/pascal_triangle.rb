@@ -1,6 +1,6 @@
 require_relative 'fixnum.rb'
 
-class Pascal_triangle
+class PascalTriangle
 
   def pascal(val)
     0.upto(val){ |val|
