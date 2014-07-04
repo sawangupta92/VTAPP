@@ -1,8 +1,8 @@
 require_relative '../lib/bike.rb'
 
-v = Vehicle.new('sawan', 100)
-puts v.show_details
-b = Bike.new('sawan', 100, 'competent')
-puts b.show_details
-b.change_price(200)
-puts b.show_details
+vehicle = Vehicle.new('honda', 1000)
+puts vehicle
+bike = Bike.new('competent', 'honda', 1000)
+puts bike
+bike.price = 2000
+puts bike

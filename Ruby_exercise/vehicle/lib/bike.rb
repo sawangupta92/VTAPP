@@ -1,14 +1,16 @@
 require_relative '../lib/vehicle.rb'
 
-class Bike<Vehicle
+class Bike < Vehicle
 
-  def initialize(name, price, dealer)
+  attr_accessor :dealer_name
+
+  def initialize(dealer_name, name, price)
     super(name, price)
-    @dealer = dealer
+    @dealer_name = dealer_name
   end
 
-  def show_details
-    [@name, @price, @dealer].to_s
+  def to_s
+    "dealer name is #{dealer_name}, bike name is #{name}, price of bike is #{price}"
   end
 
 end

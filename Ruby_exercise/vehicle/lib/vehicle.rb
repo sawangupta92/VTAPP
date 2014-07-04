@@ -1,16 +1,14 @@
 class Vehicle
 
+  attr_accessor :name, :price
+
   def initialize(name, price)
     @name = name
     @price = price
   end
 
-  def show_details
-    [@name, @price].to_s
-  end
-
-  def change_price(new_price)
-    @price = new_price
+  def to_s
+    "name of vehicle is #{name}, price of vehicle is #{price}"
   end
 
 end
