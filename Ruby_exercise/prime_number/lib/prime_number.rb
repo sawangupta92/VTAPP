@@ -1,11 +1,13 @@
-require 'prime'
+class Prime_number
 
-class Fixnum
+  def initialize(limit)
+    @limit=limit
+  end
 
-  def prime_numbers()
+  def generate_prime_numbers
     prime_numbers = []
-    1.step(self) do |number|
-      prime_numbers.push(number) if Prime.prime?(number)
+    1.step(@limit) do |number|
+      prime_numbers.push(number) if prime?(number)
     end
     prime_numbers
   end
