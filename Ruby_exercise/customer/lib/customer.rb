@@ -9,14 +9,14 @@ class Customer
   end
 
   def to_s
-    "name is #{ @name }, balance is #{ @balance }, account number is #{ @account_number }"
+    'name is #{ @name }, balance is #{ @balance }, account number is #{ @account_number }'
   end
 
   def deposit(balance) # minimum balance you can add in your account is 1 rupee
     if(balance >= 1)
       @balance += balance
     else
-      "you can not do this"
+      'you can not do this'
     end
   end
 
@@ -24,7 +24,7 @@ class Customer
     if(balance <= @balance)
       @balance -= balance
     else
-      "you can not do this"
+      'you can not do this'
     end
   end
 
