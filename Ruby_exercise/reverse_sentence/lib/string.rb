@@ -1,9 +1,9 @@
 class String
 
-  Regex = /[\S]+/
+  REGEX = /[\S]+/ # with \w the string 'hi my email is sawan@vinsol.com' will not give expected result
 
   def reverse_arrangement_of_words
-    scan(Regex).reverse.join(' ')
+    scan(REGEX).reverse.join(' ')
   end
 
 end
