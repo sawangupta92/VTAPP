@@ -1,0 +1,3 @@
+class NullArgument < ArgumentError
+
+end
