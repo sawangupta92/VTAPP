@@ -8,4 +8,4 @@ interest = Interest.new.tap do |interest|
   interest.rate = 10
 end
 
-puts "difference is #{interest.difference}"
+puts "difference is #{ interest.difference }"

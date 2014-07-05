@@ -15,9 +15,9 @@ class Time
     if self.validate?(time1) && validate?(time2)
       time1, time2 = self.string_to_time(time1), self.string_to_time(time2)
       q = time1 + time2.sec + time2.min * 60 + time2.hour * 3600
-      "#{q.day-time1.day} days #{q.hour}:#{q.min}:#{q.sec}"
+      '#{ q.day - time1.day } days #{ q.hour }:#{ q.min }:#{ q.sec }'
     else
-      "not valid"
+      'not valid'
     end
 
   end

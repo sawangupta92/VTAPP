@@ -1,7 +1,7 @@
 class Prime_number
 
   def initialize(limit)
-    @limit=limit
+    @limit = limit
   end
 
   def generate_prime_numbers

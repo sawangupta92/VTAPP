@@ -21,4 +21,4 @@ puts "\n\n"
 a.each { |val|
   puts val.to_s
 }
-puts "\n#{'total is'.ljust(50, '*')} #{ a.last.total.to_i } "
+puts "\n#{ 'total is'.ljust(50, '*') } #{ a.last.total.to_i } "

@@ -13,7 +13,7 @@ class Csv
       temp_hash[row['Designation']] << "#{ row['Name'] } (EmpId: #{ row['EmpId'] })"
     end
     puts temp_hash
-    File.open(@new_file_path, "w") do |file|
+    File.open(@new_file_path, 'w') do |file|
       file.puts temp_hash.to_a
     end
   end
