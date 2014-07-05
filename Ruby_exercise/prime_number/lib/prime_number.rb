@@ -1,3 +1,5 @@
+require_relative 'fixnum.rb'
+
 class Prime_number
 
   def initialize(limit)
@@ -7,7 +9,7 @@ class Prime_number
   def generate_prime_numbers
     prime_numbers = []
     1.step(@limit) do |number|
-      prime_numbers.push(number) if prime?(number)
+      prime_numbers.push(number) if number.prime?
     end
     prime_numbers
   end
