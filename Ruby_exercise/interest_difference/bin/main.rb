@@ -1,6 +1,6 @@
 require_relative '../lib/interest.rb'
 
-interest=Interest.new.tap do |interest|
+interest = Interest.new.tap do |interest|
   p 'enter principle'
   interest.principle = gets.chomp.to_i
   p 'enter time in year'

@@ -6,7 +6,7 @@ class Name
     begin
       raise NullArgument.new if lastname.length == 0
     rescue NullArgument
-      puts "This is not allowed"
+      'This is not allowed'
     end
     @firstname = firstname
     @lastname = lastname

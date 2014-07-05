@@ -1,7 +1,11 @@
 class Fixnum
 
   def factorial
-    raise ArgumentError  if self<0
+    begin
+      raise ArgumentError.new if self<0
+    rescue ArgumentError
+      puts "This is not allowed"
+    end
     if self == 0
       1
     elsif self > 0
