@@ -1,7 +1,7 @@
 class Array
 
   def reverse_iterate
-    reverse.join(' ')
+    yield reverse.join(' ')
   end
 
 end
