@@ -2,7 +2,7 @@ class Fixnum
 
   def factorial
     begin
-      raise ArgumentError.new if self<0
+      raise ArgumentError.new if self < 0
     rescue ArgumentError
       puts "This is not allowed"
     end
