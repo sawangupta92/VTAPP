@@ -1,5 +1,6 @@
 class Customer
 
+  attr_reader :account_number
   @@index_of_account_number = 0
   def initialize(name)
     @name = name
