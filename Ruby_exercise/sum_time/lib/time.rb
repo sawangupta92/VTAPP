@@ -54,9 +54,9 @@ class Time
 
     if total_time.year-temp_total_time.year > 0
       "#{total_time.year - temp_total_time.year} year #{total_time.month - temp_total_time.month}  #{ total_time.day - temp_total_time.day } days #{ hms_time }"
-    elsif total_time.month > 0
+    elsif total_time.month-temp_total_time.month > 0
       "#{total_time.month - temp_total_time.month} months  #{ self.calculate_days(total_time,temp_total_time,hms_time) } days #{ hms_time }"
-    elsif total_time.day > 0
+    elsif total_time.day-temp_total_time.month > 0
       "#{self.calculate_days(total_time,temp_total_time,hms_time)} days #{ hms_time }"
     else
       "#{ hms_time }"
