@@ -1,0 +1,2 @@
+class NegativeIntegerError < ArgumentError
+end

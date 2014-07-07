@@ -1,3 +1,3 @@
 require_relative '../lib/fixnum.rb'
 
-puts -3.factorial
+puts 4.factorial
