@@ -2,16 +2,24 @@ class Interest
 
   attr_accessor :principle, :time, :rate
 
-  def simple
-    principle + principle * time * rate / 100.0
+  def calculate_simple
+    principle * time * rate / 100.0
+  end
+
+  def calculate_simple_amount
+    principle + calculate_simple
   end
 
   def compound
-    principle * ((1 + rate / 100.0) ** time)
+    (1 + rate / 100.0) ** time
+  end
+
+  def calculate_compound_amount
+    principle * compound
   end
 
   def difference
-    compound - simple
+    calculate_compound_amount - calculate_simple_amount
   end
 
 end
