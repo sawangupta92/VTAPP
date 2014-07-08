@@ -7,12 +7,12 @@ while true
   puts 'Name of the product'
   name_of_product = gets.chomp
   puts 'enter y if imported else enter any other key'
-  import = gets.chomp == 'y'?true:false
+  import = gets.chomp == 'y' ? true : false
   puts 'enter y if Exempt from sales tax else enter any other key'
-  sales_tax_applies = gets.chomp == 'y'?true:false
+  sales_tax_applies = gets.chomp == 'y' ? true : false
   puts 'enter Price'
   price = gets.chomp.to_i
-  a.push(tax=Tax.new(name_of_product, import, sales_tax_applies, price, cart))
+  a.push(tax = Tax.new(name_of_product, import, sales_tax_applies, price, cart))
   tax.calculate
   puts 'enter q to exit else enter any other key'
   if(gets.chomp == 'q')
