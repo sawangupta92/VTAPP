@@ -3,7 +3,8 @@ class Interest
   attr_accessor :principle, :time, :rate
 
   def initialize
-    yield self if block_given?
+    raise ArgumentError.new "No block given" if !block_given?
+    yield self
   end
 
   def calculate_simple
