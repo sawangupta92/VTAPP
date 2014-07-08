@@ -1,6 +1,6 @@
-require_relative '../lib/tax.rb'
+require_relative '../lib/item.rb'
 
-a = []
+array_of_objects = []
 cart = ShoppingCart.new()
 
 while true
@@ -12,8 +12,8 @@ while true
   sales_tax_applies = gets.chomp == 'y' ? true : false
   puts 'enter Price'
   price = gets.chomp.to_i
-  a.push(tax = Tax.new(name_of_product, import, sales_tax_applies, price, cart))
-  tax.calculate
+  array_of_objects.push(item = Item.new(name_of_product, import, sales_tax_applies, price))
+  cart.total_price += item.add_tax
   puts 'enter q to exit else enter any other key'
   if(gets.chomp == 'q')
     break
@@ -21,7 +21,7 @@ while true
 end
 
 puts "\n\n"
-a.each { |val|
+array_of_objects.each { |val|
   puts val.to_s
 }
 puts "\n#{ 'total'.ljust(50, '*') } #{ cart.total_price.to_i } "
