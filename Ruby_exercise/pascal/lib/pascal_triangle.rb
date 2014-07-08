@@ -1,11 +1,13 @@
 require_relative 'fixnum.rb'
 
-class PascalTriangle
+class Pascal
 
-  def pascal(val)
-    0.upto(val) { |val|
-      yield(val)
-    }
+  def series(limit)
+    0.upto(limit) do |value|
+      arr = []
+      0.upto(value) { |number| arr.push(value.factorial / ((number.factorial) * ((value - number).factorial))) }
+      yield arr.join(' ')
+    end
   end
 
 end
