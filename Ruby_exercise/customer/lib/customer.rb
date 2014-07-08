@@ -1,12 +1,13 @@
 class Customer
 
   attr_reader :account_number
-  @@index_of_account_number = 0
+  @@count = 0
+
   def initialize(name)
     @name = name
-    @balance = 1000
-    @@index_of_account_number += 1
-    @account_number = @@index_of_account_number
+    @balance = 1000.0
+    @@count += 1
+    @account_number = @@count
   end
 
   def to_s
@@ -14,6 +15,7 @@ class Customer
   end
 
   def deposit(balance) # minimum balance you can add in your account is 1 rupee
+    balance = balance.to_f
     if(balance >= 1)
       @balance += balance
     else
@@ -22,6 +24,7 @@ class Customer
   end
 
   def withdrawal(balance) # you can not withdraw more amount than in your account
+    balance = balance.to_f
     if(balance <= @balance)
       @balance -= balance
     else
