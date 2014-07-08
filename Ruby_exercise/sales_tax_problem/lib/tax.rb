@@ -12,11 +12,11 @@ class Tax
   end
 
   def is_imported?(isimp)
-    isimp == "y"
+    isimp == true
   end
 
   def is_exempted_from_sales_tax?(sales_tax)
-    sales_tax == "n"
+    sales_tax == false
   end
 
   def to_s
