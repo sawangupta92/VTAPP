@@ -7,7 +7,7 @@ class Name
   end
 
   def initialize(firstname, lastname)
-    raise NullArgument, 'This is not allowed' if validate?(firstname) or firstname != firstname.capitalize
+    raise NullArgument, 'This is not allowed' if validate?(firstname) or firstname[0] != firstname[0].capitalize
     raise NullArgument, 'This is not allowed' if validate?(lastname)
     @firstname = firstname
     @lastname = lastname
