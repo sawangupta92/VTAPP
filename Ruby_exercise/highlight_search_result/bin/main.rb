@@ -1,4 +1,4 @@
 require_relative '../lib/string.rb'
 
-puts 'Enter string and regex'
-puts gets.chomp.highlight_count
+puts 'Enter string'
+puts gets.chomp.highlight_count()
