@@ -2,6 +2,10 @@ class Interest
 
   attr_accessor :principle, :time, :rate
 
+  def initialize
+    yield self if block_given?
+  end
+
   def calculate_simple
     principle * time * rate / 100.0
   end
