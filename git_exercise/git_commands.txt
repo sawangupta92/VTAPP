@@ -1,0 +1,26 @@
+1 Create a repository:- git init
+2 Make some changes -- add some files, change content of some files:- git add practice.txt
+3 commit changes:- git commit -m "first commit"
+4 remove files:- git rm temp.txt
+5 create changes and revert those changes using git when those changes are not added to staging area:- git reset --hard HEAD
+6 create changes and revert those changes after adding changes to staging area:- git reset HEAD
+7 create change and revert those changes after committing those changes:- git reset HEAD~
+Check repository status before adding changes to staging area, after adding changes to staging area and after committing changes:- git status
+Display all the commits:- git log
+Display a specific commit:- git show commit-hash
+create branches called "feature1" and "feature2" from master. :- git branch feature1
+Delete branch "feature2". :- git branch -d feature1
+Make some commits on "feature1". :- git checkout feature1
+ 									git add practice.txt
+ 									git commit -m "changes in practice.txt in feature1 branch"
+Make some commits on "master". :-   git checkout master
+ 									git add practice.txt
+ 									git commit -m "changes in practice.txt in master branch"
+merge feature1 branch in master :- git merge feature1
+create branch featrue2:- git checkout featrue2
+rebase branch featrue2 and master :- git checkout master
+									 git rebase featrue2
+use stash :- git stash
+			 git stash apply
+			 git add practice.txt
+			 git commit -m "apply stashed changes"
