@@ -1,6 +1,5 @@
 class Interest
-
-  attr_accessor :principle, :time, :rate
+  attr_accessor :principal, :time, :rate
 
   def initialize
     raise ArgumentError.new "No block given" if !block_given?
@@ -8,19 +7,15 @@ class Interest
   end
 
   def calculate_simple
-    principle * time * rate / 100.0
+    @principal * @time * @rate / 100.0
   end
 
   def calculate_simple_amount
-    principle + calculate_simple
-  end
-
-  def compound
-    (1 + rate / 100.0) ** time
+    @principal + calculate_simple
   end
 
   def calculate_compound_amount
-    principle * compound
+    principal * (1 + rate / 100.0) ** time
   end
 
   def difference
