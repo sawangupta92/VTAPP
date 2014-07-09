@@ -1,4 +1,4 @@
-require_relative '../lib/pascal_triangle.rb'
+require_relative '../lib/pascal_triangle'
 
 pascal = Pascal.new
 
