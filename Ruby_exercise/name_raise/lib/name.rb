@@ -3,7 +3,7 @@ require_relative 'null_argument.rb'
 class Name
 
   def validate?(name)
-    name.nil? or  name == false or name.class != String or name.length == 0
+    name.nil? or  name == false or name.length == 0
   end
 
   def initialize(firstname, lastname)
