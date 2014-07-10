@@ -1,24 +1,20 @@
 class Item
 
-  def initialize(item, imported, sales_tax, price)
-    @item = item
-    @imported = imported
-    @sales_tax_exempted = sales_tax
-    @price = price
-  end
+  attr_accessor :name, :imported, :sales_tax_exempted, :price
 
   def to_s
-    "#{ @item.ljust(50, '*') } #{ @price }"
+    "#{ @name.ljust(50, '*') } #{ @price }"
   end
 
-  def add_tax
-    if @imported
-      @price *= 1.05
-    end
-    if @sales_tax_exempted
-      @price *= 1.1
-    end
-    @price
+  def calculate_price
+    @price + calculate_sales_tax + calculate_import_tax
+  end
+
+  def calculate_import_tax
+    @imported ? @price * 0.1 : @price
+  end
+  def calculate_sales_tax
+    @sales_tax_exempted ? @price * 0.05 : @price
   end
 
 end

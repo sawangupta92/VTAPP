@@ -4,6 +4,7 @@ class ShoppingCart
 
   def initialize
     @total_price = 0
+    @items = []
   end
 
   def to_s
@@ -11,13 +12,13 @@ class ShoppingCart
   end
 
   def add_item
-    @item = []
     while true
-      name_of_product = yield 'Name of the product'
-      import = (yield 'enter y if imported else enter any other key') == 'y' ? true : false
-      sales_tax_applies = (yield 'enter y if Exempt from sales tax else enter any other key') == 'y' ? true : false
-      price = (yield 'enter Price').to_i
-      @item.push(item = Item.new(name_of_product, import, sales_tax_applies, price))
+      item = Item.new
+      item.name = yield 'Name of the product'
+      item.imported = (yield 'enter y if imported else enter any other key') == 'y' ? true : false
+      item.sales_tax_exempted = (yield 'enter y if Exempt from sales tax else enter any other key') == 'y' ? true : false
+      item.price = (yield 'enter Price').to_i
+      @items.push(item)
       decision = yield 'enter q to exit else enter any other key'
       if(decision == 'q')
         break
@@ -26,8 +27,8 @@ class ShoppingCart
   end
 
   def generate_bill
-    @item.each do |item|
-      @total_price += item.add_tax
+    @items.each do |item|
+      @total_price += item.calculate_price
       yield item
     end
     yield self
