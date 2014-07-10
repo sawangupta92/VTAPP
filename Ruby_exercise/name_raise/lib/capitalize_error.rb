@@ -1,0 +1,3 @@
+class CapitalizeError < ArgumentError
+
+end
