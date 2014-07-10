@@ -1,8 +1,6 @@
 class String
-  REGEX=/(can)/i
-
-  def highlight_count()
-    "#{gsub( REGEX, '(\1)')}\ntotal occurences found #{scan(REGEX).length}"
+  def highlight_and_count_serach_key(regex)
+    "#{ gsub( regex, '(\1)')}\ntotal occurences found #{scan(regex).length }"
   end
 
 end
