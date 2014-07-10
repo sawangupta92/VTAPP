@@ -1,6 +1,5 @@
 class Customer
 
-  attr_reader :account_number
   @@count = 0
 
   def initialize(name)
@@ -19,16 +18,16 @@ class Customer
     if(balance >= 1)
       @balance += balance
     else
-      'you can not do this'
+      'minimum balance you can add in your account is 1 rupee'
     end
   end
 
-  def withdrawal(balance) # you can not withdraw more amount than in your account
+  def withdraw(balance) # you can not withdraw more amount than in your account
     balance = balance.to_f
     if(balance <= @balance)
       @balance -= balance
     else
-      'you can not do this'
+      'you can not withdraw more amount than in your account'
     end
   end
 
