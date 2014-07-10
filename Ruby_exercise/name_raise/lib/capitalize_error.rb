@@ -1,3 +1,0 @@
-class CapitalizeError < ArgumentError
-
-end
