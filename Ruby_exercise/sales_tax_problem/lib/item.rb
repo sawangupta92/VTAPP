@@ -11,10 +11,10 @@ class Item
   end
 
   def calculate_import_tax
-    @imported ? @price * 0.1 : @price
+    @imported ? @price * 0.1 : 0
   end
   def calculate_sales_tax
-    @sales_tax_exempted ? @price * 0.05 : @price
+    @sales_tax_exempted ? 0 : @price * 0.05
   end
 
 end
