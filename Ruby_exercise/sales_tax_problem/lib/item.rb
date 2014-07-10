@@ -1,21 +1,10 @@
-require_relative 'shopping_cart.rb'
-
 class Item
-  attr_accessor :total
 
   def initialize(item, imported, sales_tax, price)
     @item = item
-    @isimp = imported
-    @sales_tax = sales_tax
+    @imported = imported
+    @sales_tax_exempted = sales_tax
     @price = price
-  end
-
-  def is_imported?(isimp)
-    isimp == true
-  end
-
-  def is_exempted_from_sales_tax?(sales_tax)
-    sales_tax == false
   end
 
   def to_s
@@ -23,10 +12,10 @@ class Item
   end
 
   def add_tax
-    if is_imported?(@isimp)
+    if @imported
       @price *= 1.05
     end
-    if is_exempted_from_sales_tax?(@sales_tax)
+    if @sales_tax_exempted
       @price *= 1.1
     end
     @price

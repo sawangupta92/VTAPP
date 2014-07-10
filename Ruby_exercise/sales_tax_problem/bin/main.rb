@@ -1,4 +1,4 @@
-require_relative '../lib/item.rb'
+require_relative '../lib/shopping_cart'
 
 cart = ShoppingCart.new()
 
