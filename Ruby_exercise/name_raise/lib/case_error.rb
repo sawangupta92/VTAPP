@@ -1,0 +1,3 @@
+class CaseError < ArgumentError
+
+end

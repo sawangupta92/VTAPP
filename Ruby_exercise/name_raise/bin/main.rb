@@ -1,3 +1,3 @@
-require_relative '../lib/name.rb'
+require_relative '../lib/name'
 
-puts Name.new('Sawan', 'gupta')
+puts Name.new('Sawan','gupta')

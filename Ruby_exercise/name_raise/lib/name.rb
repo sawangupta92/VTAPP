@@ -1,16 +1,16 @@
-require_relative 'null_argument.rb'
-require_relative 'capitalize_error.rb'
+require_relative 'null_argument'
+require_relative 'case_error'
 
 class Name
 
   def valid?(name)
-    name.kind_of?(String) and name.empty?
+    name.kind_of?(String) and !name.empty?
   end
 
   def initialize(firstname, lastname)
-    raise NullArgument, 'This is not allowed' if valid?(firstname)
-    raise NullArgument, 'This is not allowed' if valid?(lastname)
-    raise FirstLetterCaseError, 'first letter of first name is not capital' if firstname[0] != firstname[0].capitalize
+    raise NullArgument, 'first name not given' unless valid?(firstname)
+    raise CaseError, 'first letter of first name is not capital' unless firstname[0] == firstname[0].capitalize
+    raise NullArgument, 'last name not given' unless valid?(lastname)
     @firstname = firstname
     @lastname = lastname
   end

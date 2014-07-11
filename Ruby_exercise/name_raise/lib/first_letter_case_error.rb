@@ -1,3 +1,0 @@
-class FirstLetterCaseError < ArgumentError
-
-end
