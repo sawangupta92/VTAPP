@@ -5,9 +5,9 @@ class Time
 
   def self.sum(*time)
     if time.all? { |temp_time| valid?(temp_time.to_s) }
-      array_of_time = time.map { |temp_time| DateTime.parse(temp_time + 'IST').to_time }
       @temp_total_time = @total_time = DateTime.parse('00:00:00' + 'IST').to_time
-      array_of_time.map do |temp_time|
+      time.map do |temp_time|
+        temp_time=DateTime.parse(temp_time + 'IST').to_time
         @total_time += (@temp_total_time - temp_time).abs
       end
       @total_time=DateTime.parse('0000-01-01 00:00:00' + 'IST').to_time + (@total_time - Time.now)
