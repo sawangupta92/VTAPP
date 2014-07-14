@@ -22,65 +22,78 @@
       </tr>
       <tr>
         <td>
-          Your Name*:
+          <label for='name'>Your Name*:</label>
         </td>
         <td>
-          <input type='text'></input>
+          <input type='text' id='name'></input>
         </td>
       </tr>
       <tr>
         <td>
-          E-mail*:
+          <label for='email'>
+            E-mail*:
+          </label>
         </td>
         <td>
-          <input type='email'></input>
+          <input type='email' id='email'></input>
         </td>
       </tr>
       <tr>
        <td>
-        Phone number:
+        <label for='number'>
+          Phone number:
+        </label>
       </td>
       <td>
-        <input type='tel'></input>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Website*:
-      </td>
-      <td>
-        <input type='text' value='http://' size='30'></input>
+        <input type='tel' id='number'></input>
       </td>
     </tr>
     <tr>
       <td>
-        comments*
+        <label for='website'>
+          Website*:
+        </label>
+      </td>
+      <td>
+        <input type='text' value='http://' size='30' id='website'></input>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for='comments'>
+          comments*
+        </label>
       </td>
     </tr>
     <tr>
       <td colspan=2>
-        <textarea rows=10 cols=45></textarea>
+        <textarea rows=10 cols=45 id='comments'></textarea>
       </td>
     </tr>
     <tr>
       <td colspan=2>
-        <h4>Text field</h4>
+        <label for='sname'>
+          <h4>Text field</h4>
+        </label>      </td>
+    </tr>
+    <tr>
+      <td colspan=2>
+        <label for='sname'>
+          Your name
+        </label>        <input type='text' id='sname'></input>
       </td>
     </tr>
     <tr>
       <td colspan=2>
-        Your name
-        <input type='text'></input>
-      </td>
+        <label for='pass'>
+          <h4>Password field</h4>
+        </label>      </td>
     </tr>
     <tr>
       <td colspan=2>
-        <h4>Password field</h4>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        Password: <input type='password'></input>
+        <label for='pass'>
+          Password: 
+        </label>        <input type='password' id='pass'></input>
       </td>
     </tr>
     <tr>
@@ -91,98 +104,113 @@
     <tr>
       <td colspan=2>
         Do you like pizza?
-        <input type='radio' name='choice' checked>yes</input>
-        <input type='radio' name='choice'>no</input>
-        <input type='radio' name='choice'>may be</input>
-        <input type='radio' name='choice'>Never tried</input>
       </td>
     </tr>
-    <tr>
-      <td colspan=2>
-        <h4>Check Box</h4>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        <input type='checkbox'> check if you like</input>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
+    <td colspan=2>
+      <input type='radio' name='choice' checked>yes</input>
+    </td>
+  </tr>  <tr>
+    <td colspan=2>
+      <input type='radio' name='choice'>no</input>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <input type='radio' name='choice'>may be</input>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <input type='radio' name='choice'>Never tried</input>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <h4>Check Box</h4>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <input type='checkbox'> check if you like</input>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <label for='other'>
         <h4>Text area</h4>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <label for='other'>
         Anything you would like to say.?
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        <textarea cols=45 rows=5></textarea>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        <h4>I Like</h4>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        <select size=5>
-          <option>mushrooms</option>
-          <option>green peppers</option>
-          <option>onions</option>
-          <option>tomatoes</option>
-          <option>olives</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        <h4>Menu</h4>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        Your favorite color:
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        <select>
-          <option>Red</option>
-          <option>Green</option>
-          <option>White</option>
-          <option>Orange</option>
-          <option>Blue</option>
-          <option>Black</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        <h4>Attach file</h4>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        <input type='file'></input>
-      </td>
-    </tr>
-    <tr>
-      <td colspan=2>
-        <h4>Buttons</h4>
-      </td>
-    </tr>
-
-    <tr>
-      <td colspan=2>
-        <input type='submit'></input>
-        <input type='reset'></input>
-      </td>
-    </tr>
-  </table>
+      </label>    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <textarea cols=45 rows=5 id='other'></textarea>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <h4>I Like</h4>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <select size=5>
+        <option>mushrooms</option>
+        <option>green peppers</option>
+        <option>onions</option>
+        <option>tomatoes</option>
+        <option>olives</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <h4>Menu</h4>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      Your favorite color:
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <select>
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Orange</option>
+        <option>Blue</option>
+        <option>Black</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <h4>Attach file</h4>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <input type='file'></input>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=2>
+      <h4>Buttons</h4>
+    </td>
+  </tr>  <tr>
+    <td colspan=2>
+      <input type='submit'></input>
+      <input type='reset'></input>
+    </td>
+  </tr>
+</table>
 </form>
 </body>
 </html>
