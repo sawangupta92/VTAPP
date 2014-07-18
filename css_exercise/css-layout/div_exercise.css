@@ -1,79 +1,73 @@
-#hdiv{
+body{
+  padding-left: 10%;
+  font-family: Tahoma, Geneva, sans-serif;
+  margin-bottom: 0px;
+  color: black;
+}
+.hdiv{
   padding: 0px;
   margin: 0px;
-  width: 100%;
   background-color: #b2e7ff;
-  font-family: Tahoma, Geneva, sans-serif;
   font-size: 24px;
-  color: black;
   text-align: center;
   border-bottom: 2px solid #0ab1ff;
   margin: -8px -8px -8px;
   width: 1000px;
   height: 70px;
 }
-#hdiv>span{
-  position: relative;
-  top:20px;
+.hdiv>span{
+  display: block;
+  padding-top: 20px;
 }
 a{
   text-decoration: none;
   color: white;
 }
-#sidebar{
+.sidebar{
   background-color: #0ab1ff;
   padding: 25px 10px 25px 10px;
   margin: 8px 0px -8px -8px;
-  width:230px;
+  width:250px;
+  font-size: 18px;
 }
-#sidebar>ul>li{
+.sidebar>ul>li{
   color:white;
-  font-family: Tahoma, Geneva, sans-serif;
   font-size: 14px;
   list-style: inside;
   padding-top: 10px;
   text-indent: -40px;
 }
-#sidebar>span{
-  font-family: Tahoma, Geneva, sans-serif;
+.sidebar>div{
   font-size: 12px;
-  color: black;
 }
-#main{
+.main{
   background-color: #ededed;
-  font-size: 24px;
   padding: 25px 20px 25px 20px;
-  color: black;
-  font-family: Tahoma, Geneva, sans-serif;
-  width: 710px;
-  position: absolute;
-  left:250px;
-  bottom: 102px;
+  width: 702px;
+  margin-left: 250px;
+  margin-top: -500px;
 }
-#main, #sidebar{
+.mainheading{
+  font-size: 24px;
+}
+.main, .sidebar{
   height: 450px;
 }
-#main>div{
-  font-family: Tahoma, Geneva, sans-serif;
+.mainbody{
+  padding-top: 30px;
   font-size: 14px;
   color: #802525;
-  position: relative;
-  top: 20px;
 }
-#footer{
+.footer{
   background-color: #3cff78;
-  font-family: Tahoma, Geneva, sans-serif;
   font-size: 24px;
-  color: black;
   text-align: center;
   border-bottom: 2px solid #0ab1ff;
-  position: absolute;
-  top: 571px;
   margin: 0px 0px -8px -8px;
   height: 98px;
   width: 1000px;
 }
-#footer>span{
-  position: relative;
-  top: 40px;
+.footer>span{
+  display: block;
+  padding-top: 40px;
 }
