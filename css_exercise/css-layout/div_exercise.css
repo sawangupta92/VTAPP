@@ -4,6 +4,14 @@ body{
   margin-bottom: 0px;
   color: black;
 }
+.body{
+  background-color: #ededed;
+  max-width:1000px;
+  background-image: url("blue.gif");
+  background-repeat: repeat-y;
+  margin-left: -8px;
+  min-height: 400px
+}
 .hdiv{
   padding: 0px;
   margin: 0px;
@@ -24,11 +32,12 @@ a{
   color: white;
 }
 .sidebar{
-  background-color: #0ab1ff;
+  /*background-color: #0ab1ff;*/
   padding: 25px 10px 25px 10px;
-  margin: 8px 0px -8px -8px;
+  margin: 8px 0px 0px -8px;
   width:250px;
   font-size: 18px;
+  float:left;
 }
 .sidebar>ul>li{
   color:white;
@@ -41,17 +50,18 @@ a{
   font-size: 12px;
 }
 .main{
-  background-color: #ededed;
+  /*background-color: #ededed;*/
   padding: 25px 20px 25px 20px;
-  width: 702px;
-  margin-left: 250px;
-  margin-top: -500px;
+  /*width: 690px;*/
+  margin-left: 262px;
+  /*margin-bottom: 0px;*/
+  
 }
 .mainheading{
   font-size: 24px;
 }
 .main, .sidebar{
-  height: 450px;
+  /*height: 450px;*/
 }
 .mainbody{
   padding-top: 30px;
