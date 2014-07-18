@@ -1,0 +1,92 @@
+.header{
+  margin: 20px 0px 0px 45px;
+}
+
+.page{
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #5d5b5c;
+  font-size: 12px;
+}
+
+.shoopa{
+  margin: 0px 50px 0px 170px;
+  font-weight: bold;
+  border-right: 1px solid #c2c2c2;
+  padding-right: 35px;
+}
+
+.category{
+  font-size: 10px;
+  word-spacing: 20px;  
+  color: #c2c2c2;
+  font-weight: bold;
+}
+
+.image{
+  background-image: url("images/icon-cart.jpg");
+  height:31px;
+  width:47px;
+  margin: -20px 0px 0px 1000px;
+}
+
+.advertisement{
+  margin: 20px -8px 0px -8px;
+}
+
+.advertisement img{
+  width:100%;
+}
+
+.producthead hr{
+  margin-top: 50px;
+  width:350px;
+  color:#f6f4f5;
+}
+
+.productheadcontent{
+margin: -15px 0px 0px 550px;
+background-color: white;
+width: 116px;
+padding: 0px 10px;
+}
+
+.product{
+border: 3px solid #f6f4f5;
+width: 200px;
+padding-left: 22px;
+margin: 20px 0px 0px 275px;
+height:240px;
+}
+
+.product>img{
+  margin: 10px 0px 0px 30px;
+}
+
+.product-content{
+  margin-top: 15px;
+}
+
+.product-price{
+  font-weight: bold;
+  margin: 7px 0px 0px 60px;
+}
+
+.second{
+  margin: -246px 0px 0px 524px;
+}
+
+.third{
+  margin: -246px 0px 0px 775px;
+}
+
+.popular-content{
+  width: 129px;
+}
+
+.footer{
+margin: 40px 0px 0px 260px;
+}
+
+.brand{
+margin-left: 35px;
+}
