@@ -1,25 +1,16 @@
-body{
+.body{
   padding-left: 10%;
   font-family: Tahoma, Geneva, sans-serif;
   margin-bottom: 0px;
   color: black;
-}
-.body{
-  background-color: #ededed;
-  max-width:1000px;
-  background-image: url("blue.gif");
-  background-repeat: repeat-y;
-  margin-left: -8px;
-  min-height: 400px
+  font-size: 24px;
 }
 .hdiv{
   padding: 0px;
-  margin: 0px;
   background-color: #b2e7ff;
-  font-size: 24px;
   text-align: center;
   border-bottom: 2px solid #0ab1ff;
-  margin: -8px -8px -8px;
+  margin: -8px;
   width: 1000px;
   height: 70px;
 }
@@ -27,50 +18,49 @@ body{
   display: block;
   padding-top: 20px;
 }
-a{
+.mid {
+  overflow: hidden;
+  width: 1000px;
+  margin: 8px 0px 0px -8px;
+  background-color: #ededed;
+  background-image: url("blue.gif");
+  background-repeat: repeat-y;
+
+}
+.sidebar {
+  float: left;
+  width: 25%;
+}
+a, li{
   text-decoration: none;
   color: white;
-}
-.sidebar{
-  /*background-color: #0ab1ff;*/
-  padding: 25px 10px 25px 10px;
-  margin: 8px 0px 0px -8px;
-  width:250px;
-  font-size: 18px;
-  float:left;
-}
-.sidebar>ul>li{
-  color:white;
   font-size: 14px;
-  list-style: inside;
-  padding-top: 10px;
-  text-indent: -40px;
 }
-.sidebar>div{
+.sidebar-heading{
+  font-size: 18px;
+}
+.sidebar-content{
   font-size: 12px;
 }
-.main{
-  /*background-color: #ededed;*/
-  padding: 25px 20px 25px 20px;
-  /*width: 690px;*/
-  margin-left: 262px;
-  /*margin-bottom: 0px;*/
-  
+.sidebar-text{
+  padding: 25px 10px;
 }
-.mainheading{
-  font-size: 24px;
+.main {
+  float: left;
+  width: 75%;
+  margin-right: -1px;
 }
-.main, .sidebar{
-  /*height: 450px;*/
+.main-heading{
 }
-.mainbody{
-  padding-top: 30px;
+.main-text{
+  padding: 20px;
+}
+.main-content{
   font-size: 14px;
-  color: #802525;
+  color: #802525
 }
 .footer{
   background-color: #3cff78;
-  font-size: 24px;
   text-align: center;
   border-bottom: 2px solid #0ab1ff;
   margin: 0px 0px -8px -8px;
