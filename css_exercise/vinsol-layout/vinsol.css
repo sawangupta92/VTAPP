@@ -3,13 +3,13 @@ body{
   margin-left:0px;
   margin-right:0px;
 }
-#image{
+.image{
   width:193px;
   height:70px;
   background-image: url(vinsol-logo.png);
   margin-left: 10px;
 }
-#mail{
+.mail{
   position: relative;
   bottom: 10px;
   left:76%;
@@ -22,7 +22,7 @@ a{
   text-decoration: none;
   color:#045198;
 }
-#skype{
+.skype{
   position: relative;
   left:77%;
   bottom: 10px;
@@ -30,10 +30,10 @@ a{
   font-size: 13px;
   color: black;
 }
-#header{
+.header{
   border-bottom: 2px solid #db2927;
 }
-#heading{
+.heading{
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 18px;
   color: #2c286d;
@@ -42,7 +42,7 @@ a{
   left: 350px;
   width: 300px;
 }
-#body{
+.body{
   padding: 20px 25px;
   width: 500px;
   background-color: #ececec;
