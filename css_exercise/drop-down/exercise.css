@@ -1,103 +1,80 @@
-body>ul>li>span{
+.outer-cointainer{
+    color: black;
+    font: italic 14px Georgia, serif;
+}
+
+.main li span{
     display: block;
-    font-family: Georgia;
-    color:black;
-    font-style:italic;
     font-size: 18px;
     background-color: #cfcfcf;
     margin-left: 2px;
-    height: 27px;
-    border-bottom: 1px solid;
-    padding: 8px 20px 0px 20px;
+    height: 37px;
+    padding: 8px 20.8px 0px 20px;
+    border:#6d6d6d solid;
+    border-width: 1px 1px 0px 1px;
 }
 
-/*ul>li:nth-of-type(1):hover{*/
-/*li:first-child{
-    margin-left: 1px;
-}*/
+.first{
+    margin-left: 0px;
+}
 
-#main li, .list li {
-    list-style-type: none;
+li {
     display: inline-block;
     position: relative;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 .list {
     display:none;
     position: absolute;
-    top:36px;
+    top:46px;
     left: 2px;
     width: 200px;
 }
-#last {
-    display:none;
-    position: absolute;
-    top:36px;
-    left: -79px;
-    width: 200px;
-}
-#main li:hover .list {
-    display:block;
-}
-li:hover>.list {
-    display:block;
-    width:178px;
-    padding: 10px;
-    border-bottom: 1px solid #6d6d6d;
-    border-top: 1px solid #6d6d6d;
 
+.last {
+    left: -78px;
 }
-li:hover>.list>li{
-    font-family: Georgia;
-    color:black;
-    font-style:italic;
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+
+.main li:hover .list {
+    display:block;
+}
+
+.main{
+    border-bottom: 1px solid #6d6d6d;
+    width: 721px;
+    padding-left: 0px;
+}
+
+li:hover .list {
+    padding: 10px;
+    border:solid #6d6d6d;
+    border-width: 1px 0px;
+}
+
+li:hover .list li:not(:last-child){
+    padding: 5px 0px 5px 0px;
     border-bottom: 1px solid #cfcfcf
 }
-li:hover>.list>li:last-child{
-    font-family: Georgia;
-    color:black;
-    font-style:italic;
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-bottom: none;
+
+.list li a:hover{
+    color:#bd0707;
 }
 
-li:hover>.list>li>a:hover{
-    font-family: Georgia;
-    color:#bd0707;
-    font-style:italic;
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #cfcfcf;
-    border-bottom: none;
-}
-body>ul>li>span:hover{
-    color:#8c8c8c;
-    border-top: 1px solid #6d6d6d;
-    border-bottom: 1px solid white;
-    position: relative;
-    z-index: 1;
-}
-body>ul>li>span:hover, li:hover>.list{
-    background-color: white;
+span:hover, li:hover .list{
     border-left: 1px solid #6d6d6d;
     border-right: 1px solid #6d6d6d;
 }
+
 li:hover span{
     background-color: white;
-    border-left: 1px solid #6d6d6d;
-    border-right: 1px solid #6d6d6d;
-    border-bottom: 1px solid white;
-    border-top: 1px solid #6d6d6d;
+    border: solid #6d6d6d;
+    border-width: 1px 1px 0px 1px;
+    outline: 1px solid white;
     position: relative;
     z-index: 1;
-
 }
