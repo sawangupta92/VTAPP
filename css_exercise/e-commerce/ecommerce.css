@@ -1,15 +1,31 @@
+body{
+  margin: 0px;
+}
+
 .header{
   margin: 20px 0px 0px 45px;
+}
+
+.head-content{
+  margin:0 auto;
+  width: 1000px;
 }
 
 .page{
   font-family: Tahoma, Geneva, sans-serif;
   color: #5d5b5c;
   font-size: 12px;
+  margin:0 auto;
+  width: 1280px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 .shoopa{
-  margin: 0px 50px 0px 170px;
+  margin-right: 50px;
   font-weight: bold;
   border-right: 1px solid #c2c2c2;
   padding-right: 35px;
@@ -30,7 +46,7 @@
 }
 
 .advertisement{
-  margin: 20px -8px 0px -8px;
+  margin-top: 20px;
 }
 
 .advertisement img{
@@ -38,23 +54,37 @@
 }
 
 .producthead hr{
+  clear: both;
   margin-top: 50px;
   width:350px;
   color:#f6f4f5;
+}
+.popproducthead hr{
+  clear: both;
+  width:350px;
+  color:#f6f4f5;
+  padding-top: 5px;
+  border-left: #FFF;
+  border-bottom-color: black;
+  border-top: #FFF;
+}
+
+.product:last-child{
+  margin-bottom: 25px;
 }
 
 .productheadcontent{
 margin: -15px 0px 0px 550px;
 background-color: white;
 width: 116px;
-padding: 0px 10px;
+padding: 0px 20px;
 }
 
 .product{
 border: 3px solid #f6f4f5;
 width: 200px;
 padding-left: 22px;
-margin: 20px 0px 0px 275px;
+margin: 20px 0px 0px 140px;
 height:240px;
 }
 
@@ -71,12 +101,8 @@ height:240px;
   margin: 7px 0px 0px 60px;
 }
 
-.second{
-  margin: -246px 0px 0px 524px;
-}
-
-.third{
-  margin: -246px 0px 0px 775px;
+.product{
+  float: left;  
 }
 
 .popular-content{
@@ -84,6 +110,7 @@ height:240px;
 }
 
 .footer{
+  clear: both;
 margin: 40px 0px 0px 260px;
 }
 
