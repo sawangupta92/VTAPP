@@ -1,6 +1,8 @@
+body{
+  margin: 0px;
+}
 .section{
   font-family: Tahoma, Geneva, sans-serif;
-  margin-bottom: 0px;
   color: black;
   font-size: 24px;
   margin:0 auto;
@@ -11,18 +13,19 @@
   background-color: #b2e7ff;
   text-align: center;
   border-bottom: 2px solid #0ab1ff;
-  margin: -8px;
   width: 1000px;
   height: 70px;
 }
-.hdiv>span{
+.hdiv > span{
   display: block;
   padding-top: 20px;
+}
+ul{
+  padding-left: 15px;
 }
 .mid {
   overflow: hidden;
   width: 1000px;
-  margin: 8px 0px 0px -8px;
   background-color: #ededed;
   background-image: url("blue.gif");
   background-repeat: repeat-y;
@@ -32,11 +35,14 @@
   float: left;
   width: 25%;
 }
+
 a, li{
   text-decoration: none;
   color: white;
+  padding: 5px 0px;
   font-size: 14px;
 }
+
 .sidebar-heading{
   font-size: 18px;
 }
@@ -49,7 +55,6 @@ a, li{
 .main {
   float: left;
   width: 75%;
-  margin-right: -1px;
 }
 .main-heading{
 }
@@ -64,7 +69,6 @@ a, li{
   background-color: #3cff78;
   text-align: center;
   border-bottom: 2px solid #0ab1ff;
-  margin: 0px 0px -8px -8px;
   height: 98px;
   width: 1000px;
 }
