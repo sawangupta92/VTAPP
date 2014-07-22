@@ -1,80 +1,93 @@
-.outer-cointainer{
-    color: black;
-    font: italic 14px Georgia, serif;
+body{
+  font: italic 14px Georgia, serif;
 }
 
-.main li span{
-    display: block;
-    font-size: 18px;
-    background-color: #cfcfcf;
-    margin-left: 2px;
-    height: 37px;
-    padding: 8px 20.8px 0px 20px;
-    border:#6d6d6d solid;
-    border-width: 1px 1px 0px 1px;
+body>div ul{
+  margin:0;
+  padding:0;
+  float:left;
+  border-bottom: 2px solid #6d6d6d;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-.first{
-    margin-left: 0px;
+body>div>ul>li{
+  font-size:18px;
+  list-style-type:none;
+  background-color:#CFCFCF;
+  margin-left:2px;
+  float:left;
+  position:relative;
 }
 
-li {
-    display: inline-block;
-    position: relative;
+body>div>ul li:first-child{ 
+  margin-left:0;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+body>div>ul>li:hover{
+  border-top:2px solid #6d6d6d;
+  border-left:2px solid #6d6d6d;
+  border-right:2px solid #6d6d6d;
+  background-color:white;
 }
 
-.list {
-    display:none;
-    position: absolute;
-    top:46px;
-    left: 2px;
-    width: 200px;
+body>div>ul>li>a{
+  display:block;
+  text-decoration:none;
+  color:black;
+  padding-left:20px;
+  padding-right:20px;
+  line-height:37px;
 }
 
-.last {
-    left: -78px;
+body>div>ul>li:hover>a{
+  padding-left:18px;
+  padding-right:18px;
+  line-height: 35px;
+  color:#8c8c8c;
+  border-bottom: 2px solid white;
+  margin-bottom: -2px;
 }
 
-.main li:hover .list {
-    display:block;
+body>div>ul>li ul{
+  display:none;
+  padding:10px;
+  background-color:white;
+  width:186px;
+  border-left:2px solid #6d6d6d;
+  border-right:2px solid #6d6d6d;
+  position:absolute;
+  left:-2px;
+  top: 37px;
+  list-style-type: none;
 }
 
-.main{
-    border-bottom: 1px solid #6d6d6d;
-    width: 721px;
-    padding-left: 0px;
+body>div>ul>li:last-child ul{
+  left: -70px;
 }
 
-li:hover .list {
-    padding: 10px;
-    border:solid #6d6d6d;
-    border-width: 1px 0px;
+body>div>ul>li:hover ul{
+  display:block;
+  float:none;
 }
 
-li:hover .list li:not(:last-child){
-    padding: 5px 0px 5px 0px;
-    border-bottom: 1px solid #cfcfcf
+body>div>ul>li>ul li{
+  border-top:1px solid #cfcfcf;
 }
 
-.list li a:hover{
-    color:#bd0707;
+body>div>ul>li>ul li:first-child{ 
+  border-top: none;
 }
 
-span:hover, li:hover .list{
-    border-left: 1px solid #6d6d6d;
-    border-right: 1px solid #6d6d6d;
+body>div>ul>li>ul a{
+  text-decoration: none;
+  font-size:14px;
+  padding-top:5px;
+  padding-bottom:5px;
+  line-height:29px;
+  color: black;
 }
 
-li:hover span{
-    background-color: white;
-    border: solid #6d6d6d;
-    border-width: 1px 1px 0px 1px;
-    outline: 1px solid white;
-    position: relative;
-    z-index: 1;
+body>div>ul>li>ul>li:hover a{
+  color:#bd0707;
 }
