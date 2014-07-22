@@ -16,7 +16,6 @@ body{
   color: #5d5b5c;
   font-size: 12px;
   margin:0 auto;
-  width: 1280px;
 }
 
 a{
@@ -26,6 +25,7 @@ a{
 
 .shoopa{
   margin-right: 50px;
+  margin-left: 60px;
   font-weight: bold;
   border-right: 1px solid #c2c2c2;
   padding-right: 35px;
@@ -34,15 +34,15 @@ a{
 .category{
   font-size: 10px;
   word-spacing: 20px;  
-  color: #c2c2c2;
-  font-weight: bold;
+  /*color: #c2c2c2;*/
+  /*font-weight: bold;*/
 }
 
 .image{
   background-image: url("images/icon-cart.jpg");
   height:31px;
-  width:47px;
-  margin: -20px 0px 0px 1000px;
+  width:48px;
+  margin: -20px 0px 0px 880px;
 }
 
 .advertisement{
@@ -52,39 +52,40 @@ a{
 .advertisement img{
   width:100%;
 }
-
-.producthead hr{
-  clear: both;
-  margin-top: 50px;
-  width:350px;
-  color:#f6f4f5;
+.producthead{
+width: 500px;
+margin: 40px auto 20px;
+text-align: center;
+overflow: hidden;
+padding-top: 10px;
 }
-.popproducthead hr{
-  clear: both;
-  width:350px;
-  color:#f6f4f5;
-  padding-top: 5px;
-  border-left: #FFF;
-  border-bottom-color: black;
-  border-top: #FFF;
+.producthead div { border-top: 1px solid #EEE;
+margin-bottom: -6px;
 }
 
 .product:last-child{
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .productheadcontent{
-margin: -15px 0px 0px 550px;
-background-color: white;
-width: 116px;
+background-color: #FFF;
+width: 192px;
 padding: 0px 20px;
+font-size: 18px;
+font-family: Arial,Helvetica,sans-serif;
+display: inline-block;
+margin-top: -27px;
 }
 
+.all-products{
+  width: 800px;
+margin: 0 auto;
+}
 .product{
 border: 3px solid #f6f4f5;
 width: 200px;
 padding-left: 22px;
-margin: 20px 0px 0px 140px;
+margin: 20px 0px 8px 30px;
 height:240px;
 }
 
@@ -101,19 +102,25 @@ height:240px;
   margin: 7px 0px 0px 60px;
 }
 
+.producttype{
+  margin-top: 20px;
+}
+
 .product{
-  float: left;  
+  /*float: left;  */
+  display: inline-block;
 }
 
 .popular-content{
-  width: 129px;
+  /*width: 143px;*/
 }
 
 .footer{
   clear: both;
-margin: 40px 0px 0px 260px;
+margin: 40px 0px 0px 233px;
 }
 
 .brand{
 margin-left: 35px;
+width: 118px;
 }
