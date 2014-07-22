@@ -1,105 +1,141 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="vinsol.css">
-  <title></title>
-</head>
-<body>
-  <div class="header">
-    <div class="image">
-    </div>
-    <span class="mail">
-      Email us at: <a href="mailto:sales@vinsol.com">sales@vinsol.com</a>
-    </span>
-    <span class="skype">
-      Skype: <a href="vinsol">Vinsol</a>
-    </span>
-  </div>
-      <div class="heading">
-      Please fill the form below
-    </div>
-
-  <div class="body">
-
-    <div class="form">
-      <form action="#" method="post">
-        <div class="inputfield">
-        <span class="text">
-         <label for="firstname"> First Name</label>
-        </span> 
-        <input type="text" class="inputwidth "id="firstname"/>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="vinsol.css">
+  </head>
+  <body>
+    <div class="main-division">
+      <div class="header">
+        <div class="logo">
+          <img src="vinsol-logo.png" />
         </div>
-        <div class="inputfield">
-        <span class="text">
-         <label for="lastname"> Last Name</label></span> <input type="text" class="inputwidth  "id="lastname"/>
+        <div class="contact-list">
+          <span class="contact">
+           Email us at:          
+          <a href="sales@vinsol.com" class="email">sales@vinsol.com</a>
+          </span>
+          <span class="contact">
+          Skype:
+          </span>
+          <span class="email">
+          Vinsol</span>
         </div>
-        <div class="inputfield">
-        <span class="text"><label for="email"> Email Address</label></span> <input type="text" class="inputwidth" id="email"/>
-        </div>
-        <div class="inputfield">
-        <span class="text"><label for="password">Password</label></span> <input type="password" class="inputwidth" id="password"/>
-        </div>
-        <div class="inputfield">
-        <span class="text">Gender</span>
-        <span class="inputwidth">
-        <input type="radio" checked name="gender" class="sex">Male</input>
-        <input type="radio" name="gender" class="sex">Female</input>
-        </span>
-        </div>
-        <div class="inputfield">
-        <span class="text">Date of Birth</span>
-        <span class="inputwidth">
-        <select>
-          <option>DD</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-          <option>10</option>
-        </select>
-        <select>
-          <option>MM</option>
-          <option>Jan</option>
-          <option>Feb</option>
-          <option>March</option>
-          <option>April</option>
-          <option>May</option>
-          <option>June</option>
-          <option>July</option>
-          <option>August</option>
-          <option>Sept</option>
-          <option>Oct</option>
-          <option>Nov</option>
-          <option>Dec</option>
-        </select>
-        <select>
-          <option>YY</option>
-          <option>2010</option>
-          <option>2011</option>
-          <option>2012</option>
-          <option>2013</option>
-          <option>2014</option>
-          <option>2015</option>
-          <option>2016</option>
-          <option>2017</option>
-          <option>2018</option>
-        </select>
-        </span>
-        </div>
-        <div class="inputfield">
-        <span class="text "id=" address"><label for="add">Address</label></span>
-        <textarea class="inputwidth "id=" add"></textarea>
-        </div>
-        <div class="inputfield">
-        <button>Submit Details</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</body>
+      </div>
+      <div class="lower-division">
+        <div class="heading">Please fill the form below</div>
+          <form>
+          <div class="row">
+            <div class="inputfield">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="inputpadding">
+              <input type="text" name="fname" id="fname" class="input"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="inputfield">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="inputpadding">
+              <input type="text" name="lname" id="lname" class="input" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="inputfield">
+              <label for="email">Email Address</label>
+            </div><div class="inputpadding">
+              <input type="text" name="email" id="email" class="input"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="inputfield">
+              <label for="passwd">Password</label>
+            </div>
+            <div class="inputpadding">
+              <input type="password" name="passwd" id="passwd" class="input"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="inputfield">
+              <label for="gender">Gender</label>
+            </div>
+            <div class="inputpadding">
+              <ul>
+                <li class="genderlist"> <input type="radio" name="gender" checked>Male</input> </li>
+                <li class="genderlist"> <input type="radio" name="gender">Female</input> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+             <div class="inputfield">
+               <label for="dob">Date of Birth</label>
+             </div>
+             <div class="inputpadding">
+               <ul>
+                 <li class="datelist">
+                   <select name="day" value="dd">
+                     <option>dd</option>
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                     <option>6</option>
+                     <option>7</option>
+                     <option>8</option>
+                     <option>9</option>
+                     <option>10</option>
+                   </select>          
+                 </li>
+                 <li class="datelist">    
+                   <select name="month" value="mm">
+                     <option>mm</option>
+                     <option>Jan</option>
+                     <option>Feb</option>
+                     <option>Mar</option>
+                     <option>Apr</option>
+                     <option>May</option>
+                     <option>Jun</option>
+                     <option>Jul</option>
+                     <option>Aug</option>
+                     <option>Sep</option>
+                     <option>Oct</option>
+                     <option>Nov</option>
+                     <option>Dec</option>
+                   </select>    
+                 </li>
+                 <li class="datelist">
+                   <select name="year">
+                     <option>yy</option>
+                     <option>2011</option>
+                     <option>2012</option>
+                     <option>2013</option>
+                     <option>2014</option>
+                     <option>2015</option>
+                     <option>2016</option>
+                     <option>2017</option>
+                     <option>2018</option>
+                   </select>
+                 </li>
+               </ul>
+             </div>
+           </div>  
+           <div class="row">
+             <div class="inputfield vertical">
+               <label for="address" >Address</label>
+             </div>
+             <div class="inputpadding">
+               <textarea id="address"></textarea>
+             </div>
+           </div>   
+           <div class="row">
+             <div class="inputfield"></div>
+             <div class="inputpadding">
+              <button>Submit Details</button> 
+            </div>
+           </div>      
+          </form>
+       </div>
+     </div>
+  </body>
 </html>

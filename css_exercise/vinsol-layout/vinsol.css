@@ -1,113 +1,105 @@
 body{
-  /*padding:0px;*/
-  margin-left:0px;
-  margin-right:0px;
-}
-.image{
-  width:193px;
-  height:70px;
-  background-image: url(vinsol-logo.png);
-  margin-left: 10px;
-}
-.mail{
-  position: relative;
-  bottom: 10px;
-  left:76%;
-  width: 238px;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 13px;
-  color: black;
-}
-a{
-  text-decoration: none;
-  color:#045198;
-}
-.skype{
-  position: relative;
-  left:77%;
-  bottom: 10px;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 13px;
-  color: black;
+ font-family: Tahoma, Geneva, sans-serif;
+ font-size:13px;  
 }
 .header{
-  border-bottom: 2px solid #db2927;
+  border-bottom:2px solid #db2927;
+  padding:3px;
+  width: 100%;
+  display: table;
+}
+
+.lower-division{
+  width:500px;
+  margin: 0 auto;
+  position: relative;
+}
+.contact-list{
+ text-align: right;
+ vertical-align: bottom; 
+}
+.contact{
+ padding-left:10px;
+ color:black;
+}
+.email{
+ color:#045198;
+ text-decoration: none;
+}
+ul{
+ padding:0;
+ margin:0;
+}
+.genderlist,.datelist{
+ display:inline;
+ list-style-type:none;
+ color:#6f6f6f;
+ padding-bottom:20px;
+}
+.datelist select{
+ color:#6f6f6f;
+ width:110px;
+}
+form{
+ background-color:#ececec;
+ border:1px solid #bcbcbc;
+ width:500px !important;
+ padding:20px 25px;
+ margin:0 auto;
+ display:table;
 }
 .heading{
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 18px;
-  color: #2c286d;
-  position: relative;
-  top: 100px;
-  left: 350px;
-  width: 300px;
-}
-.body{
-  padding: 20px 25px;
-  width: 500px;
-  background-color: #ececec;
-  border: 1px solid #bcbcbc;
-  position: relative;
-  top: 100px;
-  left: 350px;
-}
-input{
-  background-color: white;
-  border-color: #b9b9b9;
-}
-.inputwidth{
-  width: 360px;
-  height: 25px; 
-}
-.text{
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 14px;
-  color: black;
-  direction: rtl;
-  width:400px;
-}
-.inputfield{
-  padding-top: 20px;
-}
-select{
-  width:95px;
-}
-#firstname{
-  margin-left: 51px;
-}
-#lastname{
-  margin-left: 50px;
-}
-#email{
-  margin-left: 24px;
-}
-#password{
-  margin-left: 60px;
-}
-.sex{
-  margin-left:73px;
-}
-select{
-  margin-left: 35px;
+
+ font-size:18px;
+ color:#2c286d;
+ padding-top: 20px;
 }
 textarea{
-  margin-left: 67px;
-  background-color: white;
-  border-color: #b9b9b9;
-  min-height: 135px;
+ background-color:white;
+ border:1px solid #b9b9b9;
+ width:360px;
+ height:133px;
+}
+.input{
+ background-color:white;
+ border:1px solid #b9b9b9;
+ width:360px;
+ height:23px ;
+ background-color:white;
 }
 button{
-  background-color: #dc2927;
-  border-color: #a10200;
-  width:130px;
-  height:32px;
-  text-align: center;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 14px;
-  color: white;
-  margin-left: 130px;
+ background-color:#dc2927 ;
+ border:1px solid #a10200 ;
+ width:130px;
+ height:32px ;
+ text-align:center ;
+ font-family: Tahoma, Verdana, Segoe, sans-serif ;
+ font-size:14px ;
+ color:white ;
 }
-#address{
-  position: relative;
-  bottom: 125px;
+.row{
+ display:table-row;
+}
+.inputpadding{
+ padding-left:20px;
+ padding-bottom:8px;
+}
+.vertical{
+  vertical-align: top;
+}
+.inputfield{
+ display:table-cell;
+ text-align:right;
+
+ font-size:14px;
+ color:black;
+}
+.logo{
+ display:table-cell;
+ text-align: left;
+}
+
+.add{
+
+  vertical-align: top;
 }
