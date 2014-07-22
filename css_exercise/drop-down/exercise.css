@@ -6,7 +6,7 @@ body>div ul{
   margin:0;
   padding:0;
   float:left;
-  border-bottom: 2px solid #6d6d6d;
+  border-bottom: 1px solid #6d6d6d;
   text-decoration: none;
   list-style-type: none;
 }
@@ -15,7 +15,7 @@ body>div>ul>li{
   font-size:18px;
   list-style-type:none;
   background-color:#CFCFCF;
-  margin-left:2px;
+  margin-left:1px;
   float:left;
   position:relative;
 }
@@ -25,9 +25,9 @@ body>div>ul li:first-child{
 }
 
 body>div>ul>li:hover{
-  border-top:2px solid #6d6d6d;
-  border-left:2px solid #6d6d6d;
-  border-right:2px solid #6d6d6d;
+  border-top:1px solid #6d6d6d;
+  border-left:1px solid #6d6d6d;
+  border-right:1px solid #6d6d6d;
   background-color:white;
 }
 
@@ -46,7 +46,7 @@ body>div>ul>li:hover>a{
   line-height: 35px;
   color:#8c8c8c;
   border-bottom: 2px solid white;
-  margin-bottom: -2px;
+  margin-bottom: -1px;
 }
 
 body>div>ul>li ul{
@@ -54,16 +54,17 @@ body>div>ul>li ul{
   padding:10px;
   background-color:white;
   width:186px;
-  border-left:2px solid #6d6d6d;
-  border-right:2px solid #6d6d6d;
+  border-left:1px solid #6d6d6d;
+  border-right:1px solid #6d6d6d;
   position:absolute;
-  left:-2px;
+  left:-1px;
   top: 37px;
   list-style-type: none;
 }
 
 body>div>ul>li:last-child ul{
-  left: -70px;
+    right:-1px;
+    left: inherit;
 }
 
 body>div>ul>li:hover ul{
@@ -84,8 +85,8 @@ body>div>ul>li>ul a{
   font-size:14px;
   padding-top:5px;
   padding-bottom:5px;
-  line-height:29px;
   color: black;
+  display: block;
 }
 
 body>div>ul>li>ul>li:hover a{
