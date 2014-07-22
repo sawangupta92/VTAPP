@@ -3,7 +3,7 @@ body{
 }
 
 .header{
-  margin: 20px 0px 0px 45px;
+margin: 40px auto;
 }
 
 .head-content{
@@ -34,12 +34,10 @@ a{
 .category{
   font-size: 10px;
   word-spacing: 20px;  
-  /*color: #c2c2c2;*/
-  /*font-weight: bold;*/
 }
 
 .image{
-  background-image: url("images/icon-cart.jpg");
+  background: url("images/icon-cart.jpg") no-repeat;
   height:31px;
   width:48px;
   margin: -20px 0px 0px 880px;
@@ -107,17 +105,16 @@ height:240px;
 }
 
 .product{
-  /*float: left;  */
   display: inline-block;
 }
 
 .popular-content{
-  /*width: 143px;*/
 }
 
 .footer{
-  clear: both;
-margin: 40px 0px 0px 233px;
+clear: both;
+width: 810px;
+margin: 10px auto;
 }
 
 .brand{
