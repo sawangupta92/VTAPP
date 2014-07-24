@@ -17,7 +17,6 @@ class Time
   end
 
   private
-
   def self.string_to_time(string)
     Time.parse("0000-01-01 #{ string } -00:00")
   end
