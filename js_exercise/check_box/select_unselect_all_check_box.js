@@ -6,13 +6,15 @@ var Change_state = function () {
 Change_state.prototype = {
   constructor: Change_state,
   check_all: function () {
-    for (var index = 0; index < this.color.length; index++) {
-      this.color[index].checked = true;
+    for (each_color in Iterator(this.color))
+    {
+      each_color[1].checked = true;
     }
   },
   uncheck_all: function () {
-    for (var index = 0; index < this.color.length; index++) {
-      this.color[index].checked = false;
+    for (each_color in Iterator(this.color))
+    {
+      each_color[1].checked = false;
     }
   },
   check_uncheck: function () {
@@ -20,7 +22,5 @@ Change_state.prototype = {
     this.none.addEventListener('click', this.uncheck_all.bind(this));
   }
 };
-window.onload = function () {
-  var obj = new Change_state();
-  obj.check_uncheck();
-}
+var obj = new Change_state();
+obj.check_uncheck();
