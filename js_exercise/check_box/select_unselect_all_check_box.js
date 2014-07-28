@@ -22,5 +22,7 @@ Change_state.prototype = {
     this.none.addEventListener('click', this.uncheck_all.bind(this));
   }
 };
-var obj = new Change_state();
-obj.check_uncheck();
+window.onload = function () {
+  var obj = new Change_state();
+  obj.check_uncheck();
+}
