@@ -10,7 +10,7 @@ Change_state.prototype = {
     if (selected_day.checked) {
       this.checked_days.push(selected_day.value);
     } 
-    else if (this.checked_days.indexOf(selected_day.value) != - 1){
+    else if (this.checked_days.indexOf(selected_day.value) != - 1) {
       this.checked_days.splice(this.checked_days.indexOf(selected_day.value), 1);
     }
   },
