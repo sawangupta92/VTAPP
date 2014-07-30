@@ -1,0 +1,43 @@
+body{
+  font:bold 12px Tahoma, Geneva, sans-serif;
+}
+.cointainer{
+  width: 400px;
+  margin: 0px auto;
+  display: table;
+  background: #e8f2d7;
+}
+.row{
+  display: table-row;
+}
+.content{
+  display: table-cell;
+}
+.textInput{
+  display: table-cell;
+  margin-left: 40px;
+  border: 1px solid #9ab368;
+  margin-bottom: 10px;
+}
+.header{
+  color: white;
+  background: #9ab368;
+  text-align: center;
+  margin-bottom: 20px
+}
+form{
+  padding-left: 5px;
+}
+.info, .pass_info{
+  font:12px Tahoma, Geneva, sans-serif;  
+}
+.pass_info{
+  text-align: center;
+}
+.btn{
+  background-color: #9ab368;
+  color: white;
+}
+.btn-container{
+  text-align: center;
+}
