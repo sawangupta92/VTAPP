@@ -7,7 +7,7 @@ Form.prototype = {
   validate: function (event) {
     for (i = 0; i < this.my_form.length - 1; i++) {
       if (this.my_form[i].value == '') {
-        alert(this.my_form[i].name + " can't be empty")
+        alert(this.my_form[i].name + ' can\'t be empty');
         event.preventDefault();
       }
     }
@@ -16,20 +16,20 @@ Form.prototype = {
       event.preventDefault();
     }
   },
-  confirm_notification: function(){
-    if(this.my_form['notification'].checked){
-      con=confirm("you sure you want notifications")
-      if(!con){
+  confirm_notification: function () {
+    if (this.my_form['notification'].checked) {
+      con = confirm('you sure you want notifications');
+      if (!con) {
         this.my_form['notification'].checked = false;
       }
     }
   },
   bind_events: function () {
     this.my_form.addEventListener('submit', this.validate.bind(this));
-    this.my_form['notification'].addEventListener('click', this.confirm_notification.bind(this))
+    this.my_form['notification'].addEventListener('click', this.confirm_notification.bind(this));
   }
 };
-window.onload = function(){
-  object = new Form(document.getElementsByClassName('textInput'), document.forms[0])
-  object.bind_events()
+window.onload = function () {
+  object = new Form(document.getElementsByClassName('textInput'), document.forms[0]);
+  object.bind_events();
 }
