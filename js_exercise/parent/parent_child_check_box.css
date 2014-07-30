@@ -1,0 +1,7 @@
+#coin li{
+  list-style-type: none;
+}
+#coin{
+  height: 100px;
+  overflow-y: scroll;
+}
