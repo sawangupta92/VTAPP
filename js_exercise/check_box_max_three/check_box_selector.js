@@ -29,13 +29,13 @@ Change_state.prototype = {
   },
   uncheck_all: function () {
     this.checked_days = [];
-    for (day in Iterator(this.days)) {
-      day[1].checked = false;
+    for (index = 0; index < this.days.length; index++) {
+      this.days[index].checked = false;
     }
   },
   bind_event: function () {
-    for (day in Iterator(this.days)) {
-      day[1].addEventListener('click', this.select.bind(this, day[1]));
+    for (index = 0; index < this.days.length; index++) {
+      this.days[index].addEventListener('click', this.select.bind(this, this.days[index]));
     }
     this.none.addEventListener('click', this.uncheck_all.bind(this));
   }
