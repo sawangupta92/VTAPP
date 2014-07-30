@@ -1,28 +1,25 @@
-var Change_state = function () {
-  this.color = document.getElementsByClassName('color');
-  this.all = document.getElementById('check');
-  this.none = document.getElementById('uncheck');
+var Colors_checkbox = function (colors, check_all, check_none) {
+  this.colors = colors;
+  this.check_all = check_all;
+  this.check_none = check_none;
 };
-Change_state.prototype = {
-  constructor: Change_state,
-  check_all: function () {
-    for (each_color in Iterator(this.color))
+Colors_checkbox.prototype = {
+  constructor: Colors_checkbox,
+  check_uncheck: function (state) {
+    for (index in this.colors)
     {
-      each_color[1].checked = true;
+      this.colors[index].checked = state;
     }
   },
-  uncheck_all: function () {
-    for (each_color in Iterator(this.color))
-    {
-      each_color[1].checked = false;
-    }
-  },
-  check_uncheck: function () {
-    this.all.addEventListener('click', this.check_all.bind(this));
-    this.none.addEventListener('click', this.uncheck_all.bind(this));
+  bind: function () {
+    this.check_all.addEventListener('click', this.check_uncheck.bind(this, true));
+    this.check_none.addEventListener('click', this.check_uncheck.bind(this, false));
   }
 };
 window.onload = function () {
-  var obj = new Change_state();
-  obj.check_uncheck();
+  var colors = document.getElementsByClassName('color');
+  var check_all = document.getElementById('check');
+  var check_none = document.getElementById('uncheck');
+  var obj = new Colors_checkbox(colors, check_all, check_none);
+  obj.bind();
 }
