@@ -1,47 +1,47 @@
-var Change_state = function (days, none) {
+var ChangeState = function (days, none) {
   this.days = days;
   this.none = none;
   this.counter = 0;
-  this.checked_days = [];
+  this.checkedDays = [];
 };
-Change_state.prototype = {
-  constructor: Change_state,
-  push_pop: function (selected_day) {
-    if (selected_day.checked) {
-      this.checked_days.push(selected_day.value);
+ChangeState.prototype = {
+  constructor: ChangeState,
+  pushPop: function (selectedDay) {
+    if (selectedDay.checked) {
+      this.checkedDays.push(selectedDay.value);
     } 
-    else if (this.checked_days.indexOf(selected_day.value) != - 1) {
-      this.checked_days.splice(this.checked_days.indexOf(selected_day.value), 1);
+    else if (this.checkedDays.indexOf(selectedDay.value) != - 1) {
+      this.checkedDays.splice(this.checkedDays.indexOf(selectedDay.value), 1);
     }
   },
-  select: function (selected_day) {
-    if (this.checked_days.length > 2) {
-      selected_day.checked = false;
-      this.push_pop(selected_day);
-      if (this.checked_days.length > 2) {
-        alert('you can not do this already selected days are ' + this.checked_days);
+  select: function (selectedDay) {
+    if (this.checkedDays.length > 2) {
+      selectedDay.checked = false;
+      this.pushPop(selectedDay);
+      if (this.checkedDays.length > 2) {
+        alert('you can not do this already selected days are ' + this.checkedDays);
       }
     } 
     else {
       this.none.checked = false;
-      this.push_pop(selected_day);
+      this.pushPop(selectedDay);
     }
   },
-  uncheck_all: function () {
-    this.checked_days = [];
+  uncheckAll: function () {
+    this.checkedDays = [];
     for (index = 0; index < this.days.length; index++) {
       this.days[index].checked = false;
     }
   },
-  bind_event: function () {
+  bindEvent: function () {
     for (index = 0; index < this.days.length; index++) {
       this.days[index].addEventListener('click', this.select.bind(this, this.days[index]));
     }
-    this.none.addEventListener('click', this.uncheck_all.bind(this));
+    this.none.addEventListener('click', this.uncheckAll.bind(this));
   }
 };
 window.onload = function () {
-  var obj = new Change_state(document.getElementsByClassName('days'), document.getElementById('none'));
-  obj.uncheck_all();
-  obj.bind_event();
+  var obj = new ChangeState(document.getElementsByClassName('days'), document.getElementById('none'));
+  obj.uncheckAll();
+  obj.bindEvent();
 }
