@@ -1,41 +1,41 @@
-var Check = function (outer_checkbox, mainlist) {
-  this.outer_checkbox = outer_checkbox;
-  this.mainlist = mainlist;
+var Check = function (outerCheckbox, mainList) {
+  this.outerCheckbox = outerCheckbox;
+  this.mainList = mainList;
 };
 
 Check.prototype = {
   constructor: Check,
-  show: function (outer_list) {
-    outer_list.children[1].style.display = 'block';
-    outer_list.scrollIntoView();
-    for (index = 0; index < outer_list.children[1].childElementCount; index++)
+  show: function (outerList) {
+    outerList.children[1].style.display = 'block';
+    outerList.scrollIntoView();
+    for (index = 0; index < outerList.children[1].childElementCount; index++)
     {
-      outer_list.children[1].children[index].children[0].checked = false;
+      outerList.children[1].children[index].children[0].checked = false;
     }
   },
-  hide: function (outer_list) {
-    outer_list.children[1].style.display = 'none';
+  hide: function (outerList) {
+    outerList.children[1].style.display = 'none';
   },
-  show_hide: function (current_outer_checkbox) {
-    outer_list = document.getElementById(current_outer_checkbox.parentNode.attributes['id'].value);
+  showHide: function (current_outer_checkbox) {
+    outerList = document.getElementById(current_outer_checkbox.parentNode.attributes['id'].value);
     if (current_outer_checkbox.checked) {
-      this.show(outer_list)
+      this.show(outerList)
     } else {
-      this.hide(outer_list)
+      this.hide(outerList)
     }
   },
-  bind_events: function () {
-    for (index = 0; index < this.outer_checkbox.length; index++) {
-      this.outer_checkbox[index].checked = false;
-      this.outer_checkbox[index].addEventListener('click', this.show_hide.bind(this, this.outer_checkbox[index]))
-      this.show_hide(this.outer_checkbox[index])
+  bindEvents: function () {
+    for (index = 0; index < this.outerCheckbox.length; index++) {
+      this.outerCheckbox[index].checked = false;
+      this.outerCheckbox[index].addEventListener('click', this.showHide.bind(this, this.outerCheckbox[index]))
+      this.showHide(this.outerCheckbox[index])
     }
   },
 };
 
 window.onload = function () {
-  var mainlist = document.getElementsByClassName('mainlist'),
-      outer_checkbox = document.getElementsByClassName('upper_checkbox');
-  obj = new Check(outer_checkbox, mainlist);
-  obj.bind_events()
+  var mainList = document.getElementsByClassName('mainlist'),
+      outerCheckbox = document.getElementsByClassName('upper_checkbox');
+  obj = new Check(outerCheckbox, mainList);
+  obj.bindEvents()
 }
