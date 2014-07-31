@@ -1,4 +1,4 @@
-var Check = function (color) {
+var Check = function (outer_checkbox, mainlist) {
   this.outer_checkbox = outer_checkbox;
   this.mainlist = mainlist;
 };
@@ -20,8 +20,7 @@ Check.prototype = {
     outer_list = document.getElementById(current_outer_checkbox.parentNode.attributes['id'].value);
     if (current_outer_checkbox.checked) {
       this.show(outer_list)
-    } 
-    else {
+    } else {
       this.hide(outer_list)
     }
   },
@@ -35,8 +34,8 @@ Check.prototype = {
 };
 
 window.onload = function () {
-  mainlist = document.getElementsByClassName('mainlist');
-  outer_checkbox = document.getElementsByClassName('upper_checkbox');
-  c = new Check(outer_checkbox, mainlist);
-  c.bind_events()
+  var mainlist = document.getElementsByClassName('mainlist'),
+      outer_checkbox = document.getElementsByClassName('upper_checkbox');
+  obj = new Check(outer_checkbox, mainlist);
+  obj.bind_events()
 }
