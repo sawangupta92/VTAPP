@@ -22,11 +22,11 @@ Match.prototype.domainSubdomain = function (event) {
   }
 };
 
-Match.prototype.bind_events = function () {
+Match.prototype.bindEvents = function () {
   this.formEvents[1].addEventListener('click', this.domainSubdomain.bind(this));
 };
 
 window.onload = function () {
   obj = new Match(document.forms[0]);
-  obj.bind_events()
+  obj.bindEvents()
 };
