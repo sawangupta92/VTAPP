@@ -1,35 +1,34 @@
-var Form = function (user_input, my_form) {
-  this.user_input = user_input;
-  this.my_form = my_form;
+var Form = function (userInput, formElements) {
+  this.userInput = userInput;
+  this.formElements = formElements;
 };
 Form.prototype = {
-  constructor: Form,
   validate: function (event) {
-    for (i = 0; i < this.my_form.length - 1; i++) {
-      if (this.my_form[i].value == '') {
-        alert(this.my_form[i].name + ' can\'t be empty');
+    for (i = 0; i < this.formElements.length - 3; i++) {
+      if (this.formElements[i].value == '') {
         event.preventDefault();
+        alert(this.formElements[i].name + ' can\'t be empty');
       }
     }
-    if (this.my_form['about_me'].value.length < 50) {
-      alert('textarea legth must be atleast 50');
+    if (this.formElements['about_me'].value.length < 50) {
       event.preventDefault();
+      alert('textarea length must be atleast 50');
     }
   },
-  confirm_notification: function () {
-    if (this.my_form['notification'].checked) {
+  confirmNotification: function () {
+    if (this.formElements['notification'].checked) {
       con = confirm('you sure you want notifications');
       if (!con) {
-        this.my_form['notification'].checked = false;
+        this.formElements['notification'].checked = false;
       }
     }
   },
-  bind_events: function () {
-    this.my_form.addEventListener('submit', this.validate.bind(this));
-    this.my_form['notification'].addEventListener('click', this.confirm_notification.bind(this));
+  bindEvents: function () {
+    this.formElements.addEventListener('submit', this.validate.bind(this));
+    this.formElements['notification'].addEventListener('click', this.confirmNotification.bind(this));
   }
 };
 window.onload = function () {
   object = new Form(document.getElementsByClassName('textInput'), document.forms[0]);
-  object.bind_events();
+  object.bindEvents();
 }
