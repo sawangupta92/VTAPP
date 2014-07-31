@@ -4,7 +4,7 @@ var Form = function (userInput, formElements) {
   this.flag = 0;
 };
 Form.prototype = {
-  validateEmpty: function (formElement, event) {
+  validateEmptyField: function (formElement, event) {
     if (formElement.value == '') {
       alert(formElement.name + ' can\'t be empty');
       this.flag = 1;
