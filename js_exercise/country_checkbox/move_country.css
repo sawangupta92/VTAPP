@@ -1,0 +1,14 @@
+#add, #remove{
+  background: #ff6000;
+  color: white;
+}
+#add{
+  vertical-align: 60px;
+  margin-left: 10px;
+}
+#remove{
+  margin-left: -60px;
+}
+select{
+  width: 200px;
+}
