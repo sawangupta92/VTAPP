@@ -1,18 +1,17 @@
-var Country = function (add, firstSelectBox, secondSelectBox) {
+var Country = function (add, remove) {
   this.add = add;
   this.remove = remove;
 };
 Country.prototype = {
   constructor: Country,
-  country: function (firstSelectBox, secondSelectBox) {
-    secondSelectBox.appendChild(firstSelectBox.selectedOptions[0]);
+  add_remove: function (firstSelectBox, secondSelectBox) {
+    for (index = 0; index < firstSelectBox.selectedOptions.length; )
+    secondSelectBox.appendChild(firstSelectBox.selectedOptions[index]);
   },
   bindEvents: function (firstSelectBox, secondSelectBox) {
-    this.add.addEventListener('click', this.country.bind(this, firstSelectBox, secondSelectBox));
-    this.remove.addEventListener('click', this.country.bind(this, secondSelectBox, firstSelectBox));
+    this.add.addEventListener('click', this.add_remove.bind(this, firstSelectBox, secondSelectBox));
+    this.remove.addEventListener('click', this.add_remove.bind(this, secondSelectBox, firstSelectBox));
   }
 }
-window.onload = function () {
-  obj = new Country(document.getElementById('add'), document.getElementById('remove'));
-  obj.bindEvents(document.getElementById('first_select_box'), document.getElementById('second_select_box'));
-}
+obj = new Country(document.getElementById('add'), document.getElementById('remove'));
+obj.bindEvents(document.getElementById('first_select_box'), document.getElementById('second_select_box'));
