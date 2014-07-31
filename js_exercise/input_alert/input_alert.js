@@ -5,8 +5,8 @@ var Name = function (first_name, last_name) {
 Name.prototype = {
   constructor: Name,
   validate: function (name) {
-    P = /^([a-z]+)$/i;
-    return P.exec(name);
+    var pattern = /^([a-z]+)$/i;
+    return pattern.exec(name);
   },
   show: function () {
     if ((this.validate(this.first_name) && this.validate(this.last_name)) && (this.first_name != null && this.last_name != null)) {
