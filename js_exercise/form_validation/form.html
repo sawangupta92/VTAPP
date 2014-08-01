@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="form.css">
-  <title></title>
-</head>
-<body>
-  <div class="cointainer">
-    <div class="header">
-    Registration Form
+  <head>
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="cointainer">
+      <div class="header">
+        Registration Form
+      </div>
+      <form name="registration_form">
+        <div class="row">
+          <span class="content">
+            Login Id:
+          </span>
+          <input type = "text" class="textInput" name="login_id"/>
+        </div>
+        <div class="row">
+          <span class="content">
+            Email Id:
+          </span>
+          <input type = "text" class="textInput" name="email"/>
+        </div>
+        <div class="row">
+          <span class="content">
+            Name:
+          </span>
+          <input type = "text" class="textInput" name="name"/>
+        </div>
+        <div class="row">
+          <span class="content">
+            Timezone:
+          </span>
+          <select class="textInput" name="timezone" class>
+            <option>GMT</option>
+            <option>IST</option>
+          </select>
+        </div>
+        <div class="row">
+          <span class="content">
+            Home Page:
+          </span>
+          <input type = "text" class="textInput" name="home_page"/><br>
+        </div>
+        <span class="content">
+          About Me
+        </span>
+        <br>
+        <textarea name="about_me" rows=10 cols=45></textarea><br>
+        <div class="row">
+          <input type="checkbox" name="notification"/>Recieve notifications of comments
+          <br> 
+        </div>
+        <span class="info">
+          you will be sent an sent an email when someone posts comments to your blog or album.
+        </span>
+        <div class="pass_info"><br>Your password will be mailed to you.</div>
+        <div class="btn-container">
+          <input type="submit" value="Go" class="btn" name="button"><br>
+        </div>
+      </form>
     </div>
-<form name="registration_form">
-  <div class="row">
-  <span class="content">
-  Login Id:
-  </span>
-  <input type = "text" class="textInput" name="login_id"/>
-  </div>
-  <div class="row">
-    <span class="content">
-Email Id:
-  </span>
-  <input type = "text" class="textInput" name="email"/>
-  </div>
-  <div class="row">
-    <span class="content">
-Name:
-  </span>
-  <input type = "text" class="textInput" name="name"/>
-  </div>
-  <div class="row">
-    <span class="content">
-Timezone:
-  </span>
-  <select class="textInput" name="timezone" class>
-    <option>GMT</option>
-    <option>IST</option>
-  </select>
-  </div>
-  <div class="row">
-  <span class="content">
-  Home Page:
-  </span>
-  <input type = "text" class="textInput" name="home_page"/><br>
-  </div>
-  <span class="content">
-  About Me
-  </span>
-  <br>
-  <textarea name="about_me" rows=10 cols=45></textarea><br>
-  <div class="row">
-  <input type="checkbox" name="notification"/>Recieve notifications of comments
-  <br> 
-  </div>
-  <span class="info">
-  you will be sent an sent an email when someone posts comments to your blog or album.
-  </span>
-  <div class="pass_info"><br>Your password will be mailed to you.</div>
-  <div class="btn-container">
-  <input type="submit" value="Go" class="btn" name="button"><br>
-  </div>
-</form>
-  </div>
-<script type="text/javascript" src="form.js"></script>
-</body>
+    <script type="text/javascript" src="form.js"></script>
+  </body>
 </html>

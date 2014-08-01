@@ -4,10 +4,12 @@ var Form = function (userInput, formElements) {
   this.flag = 0;
 };
 Form.prototype = {
-  validateEmptyField: function (formElement, event) {
-    if (formElement.value == '') {
-      alert(formElement.name + ' can\'t be empty');
-      this.flag = 1;
+  validateEmptyField: function () {
+    for (i = 0; i < this.formElements.length - 3; i++) {
+      if (this.formElements[i].value == '') {
+        alert(this.formElements[i].name + ' can\'t be empty');
+        this.flag = 1;
+      }
     }
   },
   validateLength: function (formElement, event) {
@@ -18,19 +20,15 @@ Form.prototype = {
   },
   validate: function (event) {
     event.preventDefault();
-    for (i = 0; i < this.formElements.length - 3; i++) {
-      this.validateEmpty(this.formElements[i], event);
-    }
+    this.validateEmptyField();
     this.validateLength(this.formElements['about_me'], event);
-    if(this.flag != 1){
+    if (this.flag != 1) {
       this.formElements.submit()
     }
   },
   confirmNotification: function () {
-    if (this.formElements['notification'].checked) {
-      if (!confirm('you sure you want notifications')) {
-        this.formElements['notification'].checked = false;
-      }
+    if (this.formElements['notification'].checked && !confirm('you sure you want notifications')) {
+      this.formElements['notification'].checked = false;
     }
   },
   bindEvents: function () {

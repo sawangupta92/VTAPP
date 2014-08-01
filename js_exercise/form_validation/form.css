@@ -1,5 +1,5 @@
 body{
-  font:bold 12px Tahoma, Geneva, sans-serif;
+  font: bold 12px Tahoma, Geneva, sans-serif;
 }
 .cointainer{
   width: 400px;
@@ -29,7 +29,7 @@ form{
   padding-left: 5px;
 }
 .info, .pass_info{
-  font:12px Tahoma, Geneva, sans-serif;  
+  font: 12px Tahoma, Geneva, sans-serif;  
 }
 .pass_info{
   text-align: center;
