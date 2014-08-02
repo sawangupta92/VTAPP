@@ -1,9 +1,9 @@
 var Form = function (userInput, formElements) {
   this.userInput = userInput;
   this.formElements = formElements;
+  this.REGEXFOREMAIL = /^(\w|\d|\.)+@(\w|\d|\.)+$/;
+  this.REGEXFORURL = /^((http|https|ftp):\/\/)/;
 };
-Form.prototype.REGEXFOREMAIL = /^(\w|\d|\.)+@(\w|\d|\.)+$/;
-Form.prototype.REGEXFORURL = /^((http|https|ftp):\/\/)/;
 Form.prototype.validateEmail = function (formElement) {
   if (this.REGEXFOREMAIL.test(formElement.value)) {
     return true;
@@ -12,25 +12,26 @@ Form.prototype.validateEmail = function (formElement) {
     return false;
   }
 }
+Form.prototype.validateUrl = function (formElement) {
+  return this.REGEXFORURL.test(formElement.value)
+}
 Form.prototype.validateHomePage = function (formElement) {
-  if (this.REGEXFORURL.test(formElement.value)) {
-    return true;
-  } else {
+  if (!this.validateUrl(formElement)) {
     alert('not valid URL');
-    return false;
   }
+  return this.validateUrl(formElement);
 }
 Form.prototype.validateEmptyField = function () {
   var flag = true;
   for (i = 0; i < this.formElements.length - 3; i++) {
-    if (this.formElements[i].value == '') {
+    if (this.formElements[i].value.trim() == '') {
       alert(this.formElements[i].name + ' can\'t be empty');
       flag = false;
     }
   }
   return flag;
 }
-Form.prototype.validateLength = function (formElement, event) {
+Form.prototype.validateLength = function (formElement) {
   if (formElement.value.length < 50) {
     alert('textarea length must be atleast 50');
     return false;
@@ -39,13 +40,9 @@ Form.prototype.validateLength = function (formElement, event) {
   }
 }
 Form.prototype.validate = function (event) {
-  var flag = true;
   event.preventDefault();
-  flag = this.validateEmptyField() && flag;
-  flag = this.validateLength(this.formElements['about_me'], event) && flag;
-  flag = this.validateEmail(this.formElements['email']) && flag;
-  flag = this.validateHomePage(this.formElements['home_page']) && flag;
-  if (flag) {
+  if (this.validateEmptyField() & this.validateLength(this.formElements['about_me']) &
+  this.validateEmail(this.formElements['email']) & this.validateHomePage(this.formElements['home_page'])) {
     this.formElements.submit()
   }
 }
