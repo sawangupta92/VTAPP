@@ -1,11 +1,13 @@
+var regex = {
+  email: /^(\w|\d|\.)+@(\w|\d|\.)+$/,
+  url: /^((http|https|ftp):\/\/)/
+}
 var Form = function (userInput, formElements) {
   this.userInput = userInput;
   this.formElements = formElements;
-  this.REGEXFOREMAIL = /^(\w|\d|\.)+@(\w|\d|\.)+$/;
-  this.REGEXFORURL = /^((http|https|ftp):\/\/)/;
 };
 Form.prototype.validateEmail = function (formElement) {
-  if (this.REGEXFOREMAIL.test(formElement.value)) {
+  if (regex.email.test(formElement.value)) {
     return true;
   } else {
     alert('not valid email id');
@@ -13,7 +15,7 @@ Form.prototype.validateEmail = function (formElement) {
   }
 }
 Form.prototype.validateUrl = function (formElement) {
-  return this.REGEXFORURL.test(formElement.value)
+  return regex.url.test(formElement.value)
 }
 Form.prototype.validateHomePage = function (formElement) {
   if (!this.validateUrl(formElement)) {
