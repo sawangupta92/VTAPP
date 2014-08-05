@@ -6,12 +6,13 @@ var CheckBox = function (days, none) {
 CheckBox.prototype = {
   constructor: CheckBox,
   select: function (selectedDay) {
-    if (this.checkedDays.length > 2) {
+    var checkedDaysLength = this.checkedDays.length;
+    if (checkedDaysLength > 2) {
       selectedDay.checked = false;
       alert('you can not do this already selected days are ' + this.checkedDays);
     } else {
       this.checkedDays.push(selectedDay.value);
-      if (this.checkedDays.length == 1) {
+      if (checkedDaysLength == 0) {
         this.none.checked = false;
       }
     }
@@ -26,17 +27,18 @@ CheckBox.prototype = {
       this.deselect(selectedDay);
     }
   },
-  uncheckAll: function () {
+  uncheckAll: function (totalDaysLength) {
     this.checkedDays = [];
-    for (index = 0; index < this.days.length; index++) {
+    for (index = 0; index < totalDaysLength; index++) {
       this.days[index].checked = false;
     }
   },
   bindEvent: function () {
-    for (index = 0; index < this.days.length; index++) {
+    var totalDaysLength = this.days.length;
+    for (index = 0; index < totalDaysLength; index++) {
       this.days[index].addEventListener('click', this.changeState.bind(this, this.days[index]));
     }
-    this.none.addEventListener('click', this.uncheckAll.bind(this));
+    this.none.addEventListener('click', this.uncheckAll.bind(this, totalDaysLength));
   }
 };
 window.onload = function () {
