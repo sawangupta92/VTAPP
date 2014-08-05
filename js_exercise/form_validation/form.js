@@ -1,41 +1,57 @@
 var Form = function (userInput, formElements) {
   this.userInput = userInput;
   this.formElements = formElements;
-  this.flag = 0;
 };
+
 Form.prototype = {
   validateEmptyField: function () {
+    var flag = true;
     for (i = 0; i < this.formElements.length - 3; i++) {
-      if (this.formElements[i].value == '') {
+      if (this.formElements[i].value.trim() == '') {
         alert(this.formElements[i].name + ' can\'t be empty');
-        this.flag = 1;
+        flag = false;
       }
     }
+    return flag;
   },
+
   validateLength: function (formElement, event) {
     if (formElement.value.length < 50) {
       alert('textarea length must be atleast 50');
-      this.flag = 1;
+      return false;
+    } else {
+      return true;
     }
   },
+
   validate: function (event) {
     event.preventDefault();
-    this.validateEmptyField();
-    this.validateLength(this.formElements['about_me'], event);
-    if (this.flag != 1) {
+    if (this.validateEmptyField() & this.validateLength(this.formElements['about_me'], event) & this.notificationSeen()) {
       this.formElements.submit()
     }
   },
+
   confirmNotification: function () {
-    if (this.formElements['notification'].checked && !confirm('you sure you want notifications')) {
-      this.formElements['notification'].checked = false;
+    this.formElements['notification'].checked  = this.formElements['notification'].checked && confirm('you sure you want notifications')
+    check = true;
+  },
+
+  notificationSeen: function () {
+    if (typeof check == 'undefined') {
+      check = true;
+      this.formElements['notification'].checked = confirm('do you want notifications');
+      return true
+    } else {
+      return true;
     }
   },
+
   bindEvents: function () {
     this.formElements.addEventListener('submit', this.validate.bind(this));
     this.formElements['notification'].addEventListener('click', this.confirmNotification.bind(this));
   }
 };
+
 window.onload = function () {
   object = new Form(document.getElementsByClassName('textInput'), document.forms[0]);
   object.bindEvents();
