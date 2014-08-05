@@ -1,7 +1,7 @@
 var regex = {
   email: /^(\w|\d|\.)+@(\w|\d|\.)+$/,
   url: /^((http|https|ftp):\/\/)/
-}
+};
 var Form = function (userInput, formElements) {
   this.userInput = userInput;
   this.formElements = formElements;
@@ -49,11 +49,7 @@ Form.prototype.validate = function (event) {
   }
 }
 Form.prototype.confirmNotification = function () {
-  if (this.formElements['notification'].checked) {
-    if (!confirm('you sure you want notifications')) {
-      this.formElements['notification'].checked = false;
-    }
-  }
+  this.formElements['notification'].checked = this.formElements['notification'].checked && confirm('you sure you want notifications');
 }
 Form.prototype.bindEvents = function () {
   this.formElements.addEventListener('submit', this.validate.bind(this));
