@@ -26,19 +26,19 @@ Form.prototype = {
 
   validate: function (event) {
     event.preventDefault();
-    if (this.validateEmptyField() & this.validateLength(this.formElements['about_me'], event) & this.notificationSeen()) {
+    if (this.validateEmptyField() & this.validateLength(this.formElements['about_me'], event) & this.CheckedAtLeastOnce()) {
       this.formElements.submit()
     }
   },
 
   confirmNotification: function () {
-    this.formElements['notification'].checked  = this.formElements['notification'].checked && confirm('you sure you want notifications')
-    check = true;
+    this.formElements['notification'].checked = this.formElements['notification'].checked && confirm('you sure you want notifications')
+    notificationSeen = true;
   },
 
-  notificationSeen: function () {
-    if (typeof check == 'undefined') {
-      check = true;
+  CheckedAtLeastOnce: function () {
+    if (typeof notificationSeen == 'undefined') {
+      notificationSeen = true;
       this.formElements['notification'].checked = confirm('do you want notifications');
       return true
     } else {
