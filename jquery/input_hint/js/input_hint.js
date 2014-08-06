@@ -21,8 +21,10 @@ input.prototype.removeHint = function () {
   _that.setValue('');
 };
 input.prototype.addClassText = function () {
-  _that.setValue(_that.labelText);
-  _that.appendClass('hint');
+  if(!_that.elem.val()) {
+    _that.setValue(_that.labelText);
+    _that.appendClass('hint');
+  }
 };
 input.prototype.bindEvents = function () {
   _that.elem.bind('focus', _that.removeHint);
