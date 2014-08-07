@@ -3,22 +3,25 @@ var Match = function (formEvents) {
   this.result = '';
 };
 
-Match.prototype.REGEXTOSPLIT = /^http:\/\/((\w)*|\.)(.)((\w|\.)*)/;
-Match.prototype.REGEX = /^(http:\/\/)/;
+// Match.prototype.REGEXTOSPLIT = /^http:\/\/((\w)*|\.)(.)((\w|\.)*)/;
+Match.prototype.REGEXTOSPLIT = /([a-z]*)(.)(.*)$/;
+Match.prototype.REGEX = /^(http:\/\/)?([a-z]+(\.)[a-z]+)*$/;
 Match.prototype.validate = function () {
   return this.REGEX.test(this.formEvents[0].value)
 };
 
 Match.prototype.domainSubdomain = function (event) {
+    event.preventDefault();
   if (this.validate()) {
     this.result = this.REGEXTOSPLIT.exec(this.formEvents[0].value);
-    alert('doamin is ' + this.result[1]);
-    if (this.result[4]) {
-      alert('subdomain is ' + this.result[4]);
+    debugger;
+    str = 'doamin is ' + this.result[3];
+    if (this.result[1]) {
+    str += ' subdomain is ' + this.result[1];
     }
+    alert(str)
   } else {
     alert('not valid')
-    event.preventDefault();
   }
 };
 
