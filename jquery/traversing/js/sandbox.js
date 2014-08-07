@@ -4,7 +4,7 @@
 $('img').each(function(index,element){console.log(element.alt)});
 
 // Select the search input text box, then traverse up to the form and add a class to the form.
-$('input[type=text]').closest('form').addClass('searchClass').css("background-color", "green");
+$('[type=text]').closest('form').addClass('searchClass').css("background-color", "green");
 
 // Select the list item inside #myList that has a class of "current" and remove that class from it; add a class of "current" to the next list item.
 var listElement = $('#myList li.current');
