@@ -9,8 +9,8 @@ Check.prototype.show = function (outerList) {
 
 Check.prototype.uncheckList = function (outerList) {
   var outerListLength = outerList.childElementCount,
-      inputCheckbox = document.getElementsByClassName(outerList.id)
-  for (var index = 0; index < outerListLength; index++)
+      inputCheckbox = document.getElementsByClassName(outerList.id);
+  for (var index = 0; index < outerListLength; index++);
   {
     inputCheckbox[index].checked = false;
   }
@@ -24,9 +24,9 @@ Check.prototype.hide = function (outerList) {
 Check.prototype.showHide = function (currentOuterCheckbox) {
   outerList = document.getElementById(currentOuterCheckbox.parentNode.attributes['id'].value);
   if (currentOuterCheckbox.checked) {
-    this.show(outerList)
+    this.show(outerList);
   } else {
-    this.hide(outerList)
+    this.hide(outerList);
   }
 };
 
@@ -38,11 +38,11 @@ Check.prototype.bindEvents = function () {
 };
 
 window.onload = function () {
-var outerCheckbox = document.getElementsByClassName('upper_checkbox'),
-innerListLength = document.getElementsByClassName('innerList') .length;
-obj = new Check(outerCheckbox);
-obj.bindEvents()
-for (var index = 0; index < innerListLength; index++) {
-  obj.showHide(outerCheckbox[index])
-}
+  var outerCheckbox = document.getElementsByClassName('upper_checkbox'),
+      innerListLength = document.getElementsByClassName('innerList') .length;
+  obj = new Check(outerCheckbox);
+  obj.bindEvents();
+  for (var index = 0; index < innerListLength; index++) {
+    obj.showHide(outerCheckbox[index]);
+  }
 }

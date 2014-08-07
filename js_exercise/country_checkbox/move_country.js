@@ -5,7 +5,7 @@ var Country = function (elements) {
   this.secondSelectBox = elements.secondSelectBox;
 };
 Country.prototype.move = function (firstSelectBox, secondSelectBox) {
-  for (index = 0; index < firstSelectBox.selectedOptions.length; ) {
+  for (index = 0; index < firstSelectBox.selectedOptions.length;) {
     secondSelectBox.appendChild(firstSelectBox.selectedOptions[index]);
   }
 };
