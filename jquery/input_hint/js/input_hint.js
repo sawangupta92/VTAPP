@@ -1,40 +1,49 @@
-var input = function (elem, labelElem) {
-  _that = this;
-  this.elem = elem;
-  this.labelElem = labelElem;
-  this.labelText = labelElem.html();
+var Input = function (element, labelElement, inputClassName) {
+  this.element = element;
+  this.labelElement = labelElement;
+  this.labelText = labelElement.html();
+  this.inputClassName = inputClassName;
 };
-input.prototype.setValue = function (text) {
-  _that.elem.val(text);
-}
-input.prototype.addText = function () {
-  _that.setValue(_that.labelElem.html());
+Input.prototype.setValue = function (text) {
+  this.element.val(text);
 };
-input.prototype.appendClass = function (className) {
-  _that.elem.addClass(className);
+Input.prototype.addText = function () {
+  this.setValue(this.labelElement.html());
 };
-input.prototype.removeElement = function () {
-  _that.labelElem.remove();
+Input.prototype.appendClass = function () {
+  this.element.addClass(this.inputClassName);
 };
-input.prototype.removeHint = function () {
-  _that.elem.removeClass('hint');
-  _that.setValue('');
+Input.prototype.removeElement = function () {
+  this.labelElement.remove();
 };
-input.prototype.addClassText = function () {
-  if(!_that.elem.val()) {
-    _that.setValue(_that.labelText);
-    _that.appendClass('hint');
+Input.prototype.removeHint = function () {
+  if (this.element.val() == this.labelElement.html()) {
+    this.element.removeClass(this.inputClassName);
+    this.setValue('');
   }
 };
-input.prototype.bindEvents = function () {
-  _that.elem.bind('focus', _that.removeHint);
-  _that.elem.bind('blur', _that.addClassText);
+Input.prototype.addClassText = function () {
+  if (!this.element.val()) {
+    this.setValue(this.labelText);
+    this.appendClass(this.inputClassName);
+  }
 };
+Input.prototype.bindEvents = function () {
+  var _this = this;
+  this.element.on('focus', function () {
+    _this.removeHint();
+  }) .on('blur', function () {
+    _this.addClassText();
+  });
+};
+Input.prototype.initialize = function () {
+  this.addText();
+  this.appendClass();
+  this.removeElement();
+  this.bindEvents();
+}
 $(document) .ready(function () {
-  var labelElem = $('[for=q]');
-  obj = new input($('input[type=text]'), labelElem);
-  obj.addText();
-  obj.appendClass('hint');
-  obj.removeElement();
-  obj.bindEvents();
+  var labelElement = $('[for=q]');
+  obj = new Input($('.input_text'), labelElement, 'hint');
+  obj.initialize()
 });
