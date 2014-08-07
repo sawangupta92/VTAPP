@@ -36,5 +36,7 @@ navigation.prototype.initialize = function(){
   this.bindEvents();  
 }
 
+$(document).ready(function () {
 var obj = new navigation($('.module'));
 obj.initialize();
+});
