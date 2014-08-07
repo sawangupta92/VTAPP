@@ -28,5 +28,7 @@ slideshow.prototype.initialize = function () {
   this.showHide(0)
   this.delayAndExecute()
 };
+$(document).ready(function () {
 obj = new slideshow()
 obj.initialize()
+});
